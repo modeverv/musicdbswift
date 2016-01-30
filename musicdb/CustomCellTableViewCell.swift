@@ -19,6 +19,7 @@ class CustomCellTableViewCell: UITableViewCell {
   var genre = "";
   var artist = "";
   var album = "";
+  var value = "";
 
   var pageType:PageType = PageType.Genre
 
@@ -40,11 +41,11 @@ class CustomCellTableViewCell: UITableViewCell {
       self.txtTitle.text = title;
     }
 
-
     if genre == "" {
       self.txtGenre.text = "";
     } else {
       self.txtGenre.text = "Genre:" + genre;
+      print(genre)
     }
 
     if artist == "" {
@@ -64,12 +65,13 @@ class CustomCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-        self.backgroundColor = UIColor.brownColor()
+      //super.setSelected(selected, animated: animated)
+      super.setSelected(false,animated: false)
+      // Configure the view for the selected state
     }
     
 }

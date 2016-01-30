@@ -73,6 +73,9 @@
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="nOe-q6-1xV" id="w6m-w6-NtA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBU-yt-DEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

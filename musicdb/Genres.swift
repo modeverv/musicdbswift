@@ -9,5 +9,15 @@
 import Foundation
 
 class Genres {
-  
+  var data :JSON?
+  let api = Api()
+  var genres :JSON?
+
+  func execute() -> Void {
+    if data == nil {
+      data = api.getGenre()
+    }
+    genres = data![1]
+  }
+
 }

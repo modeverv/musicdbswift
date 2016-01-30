@@ -16,6 +16,7 @@
 		176E23391C5CC035007AC209 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E23381C5CC035007AC209 /* Genres.swift */; };
 		176E233B1C5CC06D007AC209 /* SearchByGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E233A1C5CC06D007AC209 /* SearchByGenre.swift */; };
 		176E233D1C5CC08F007AC209 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E233C1C5CC08F007AC209 /* Search.swift */; };
+		176E233F1C5CC1BD007AC209 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E233E1C5CC1BD007AC209 /* Api.swift */; };
 		1779FF071C5C784000F00317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779FF061C5C784000F00317 /* AppDelegate.swift */; };
 		1779FF091C5C784000F00317 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779FF081C5C784000F00317 /* MainViewController.swift */; };
 		1779FF0C1C5C784000F00317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1779FF0A1C5C784000F00317 /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 		1779FF111C5C784000F00317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1779FF101C5C784000F00317 /* Assets.xcassets */; };
 		1779FF141C5C784000F00317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1779FF121C5C784000F00317 /* LaunchScreen.storyboard */; };
 		1779FF201C5C82CC00F00317 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779FF1F1C5C82CC00F00317 /* User.swift */; };
+		177E2A581C5CD0700070C9EB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E2A571C5CD0700070C9EB /* SwiftyJSON.swift */; };
+		61796E5FD31A9EE0BA57DC17 /* Pods_musicdb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBD4A3A14AE65AEDCDC4DD1 /* Pods_musicdb.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,7 @@
 		176E23381C5CC035007AC209 /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		176E233A1C5CC06D007AC209 /* SearchByGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchByGenre.swift; sourceTree = "<group>"; };
 		176E233C1C5CC08F007AC209 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		176E233E1C5CC1BD007AC209 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		1779FF031C5C784000F00317 /* musicdb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicdb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1779FF061C5C784000F00317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1779FF081C5C784000F00317 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +48,10 @@
 		1779FF131C5C784000F00317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1779FF151C5C784000F00317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1779FF1F1C5C82CC00F00317 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		177E2A571C5CD0700070C9EB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		47F52FD9C2F51C3695426ADE /* Pods-musicdb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicdb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-musicdb/Pods-musicdb.debug.xcconfig"; sourceTree = "<group>"; };
+		CFE9DC59297F0004C353501E /* Pods-musicdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicdb.release.xcconfig"; path = "Pods/Target Support Files/Pods-musicdb/Pods-musicdb.release.xcconfig"; sourceTree = "<group>"; };
+		FFBD4A3A14AE65AEDCDC4DD1 /* Pods_musicdb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicdb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61796E5FD31A9EE0BA57DC17 /* Pods_musicdb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +89,8 @@
 			children = (
 				1779FF051C5C784000F00317 /* musicdb */,
 				1779FF041C5C784000F00317 /* Products */,
+				ECAF3D161A2AEE6264D06BC6 /* Pods */,
+				5BEBCA6EA669F87C35C5508C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +105,7 @@
 		1779FF051C5C784000F00317 /* musicdb */ = {
 			isa = PBXGroup;
 			children = (
+				177E2A561C5CCF200070C9EB /* Lib */,
 				176E23351C5CB6D9007AC209 /* Contants */,
 				176E232E1C5CAA3A007AC209 /* Parts */,
 				1779FF1E1C5C796600F00317 /* Storyboard */,
@@ -132,6 +144,7 @@
 		1779FF1D1C5C795A00F00317 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				176E233E1C5CC1BD007AC209 /* Api.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -145,6 +158,31 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		177E2A561C5CCF200070C9EB /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				177E2A571C5CD0700070C9EB /* SwiftyJSON.swift */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		5BEBCA6EA669F87C35C5508C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFBD4A3A14AE65AEDCDC4DD1 /* Pods_musicdb.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECAF3D161A2AEE6264D06BC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47F52FD9C2F51C3695426ADE /* Pods-musicdb.debug.xcconfig */,
+				CFE9DC59297F0004C353501E /* Pods-musicdb.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1779FF181C5C784000F00317 /* Build configuration list for PBXNativeTarget "musicdb" */;
 			buildPhases = (
+				E3B706D398E7483EE53C94D6 /* Check Pods Manifest.lock */,
 				1779FEFF1C5C784000F00317 /* Sources */,
 				1779FF001C5C784000F00317 /* Frameworks */,
 				1779FF011C5C784000F00317 /* Resources */,
+				3C39A881733BA81822C6497C /* Embed Pods Frameworks */,
+				73F0383586DC7924AC232B71 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,6 +260,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C39A881733BA81822C6497C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-musicdb/Pods-musicdb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73F0383586DC7924AC232B71 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-musicdb/Pods-musicdb-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3B706D398E7483EE53C94D6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1779FEFF1C5C784000F00317 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -230,10 +319,12 @@
 				1779FF201C5C82CC00F00317 /* User.swift in Sources */,
 				174019791C5C959500ED8689 /* ApplicationViewController.swift in Sources */,
 				1779FF091C5C784000F00317 /* MainViewController.swift in Sources */,
+				176E233F1C5CC1BD007AC209 /* Api.swift in Sources */,
 				1779FF071C5C784000F00317 /* AppDelegate.swift in Sources */,
 				176E23311C5CABBB007AC209 /* CustomCellTableViewCell.swift in Sources */,
 				176E23371C5CB6F9007AC209 /* EnumPageType.swift in Sources */,
 				176E233B1C5CC06D007AC209 /* SearchByGenre.swift in Sources */,
+				177E2A581C5CD0700070C9EB /* SwiftyJSON.swift in Sources */,
 				1779FF0F1C5C784000F00317 /* musicdb.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +434,7 @@
 		};
 		1779FF191C5C784000F00317 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F52FD9C2F51C3695426ADE /* Pods-musicdb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = musicdb/Info.plist;
@@ -355,6 +447,7 @@
 		};
 		1779FF1A1C5C784000F00317 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE9DC59297F0004C353501E /* Pods-musicdb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = musicdb/Info.plist;

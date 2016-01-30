@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
     textFiledPassword.secureTextEntry = true;
     loginCheckWithTouch()
+
   }
 
   // ログインアクション
