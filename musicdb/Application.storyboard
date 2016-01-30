@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application View Controller-->
+        <scene sceneID="cfj-ri-VMf">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="Pzw-Rl-caH" customClass="ApplicationViewController" customModule="musicdb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2QP-tG-Ggo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Thc-0V-Nsh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OlS-u0-vra">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="musicdb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZQ-EL-q0T">
+                                <rect key="frame" x="0.0" y="20" width="600" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="BV2-sd-6TC"/>
+                                    <constraint firstAttribute="height" constant="21" id="NIW-IY-qaP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-q6-1xV">
+                                <rect key="frame" x="0.0" y="128" width="600" height="472"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tp-XK-SPd">
+                                <rect key="frame" x="6" y="90" width="74" height="30"/>
+                                <state key="normal" title="play/pause"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdZ-Rq-ZLM">
+                                <rect key="frame" x="157" y="90" width="30" height="30"/>
+                                <state key="normal" title="&gt;&gt;"/>
+                            </button>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
+                                <rect key="frame" x="0.0" y="41" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZg-mW-nZJ">
+                                <rect key="frame" x="220" y="90" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-Dt-Sap">
+                                <rect key="frame" x="109" y="90" width="30" height="30"/>
+                                <state key="normal" title="&lt;&lt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nOe-q6-1xV" firstAttribute="centerX" secondItem="OlS-u0-vra" secondAttribute="centerX" id="54b-Ud-a89"/>
+                            <constraint firstItem="oqh-Or-LCa" firstAttribute="top" secondItem="AZQ-EL-q0T" secondAttribute="bottom" id="6qJ-dk-z96"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AZQ-EL-q0T" secondAttribute="trailing" constant="10" id="Bnf-8a-iOo"/>
+                            <constraint firstItem="nOe-q6-1xV" firstAttribute="leading" secondItem="OlS-u0-vra" secondAttribute="leadingMargin" constant="-20" id="FdQ-IX-Rnj"/>
+                            <constraint firstItem="oqh-Or-LCa" firstAttribute="leading" secondItem="OlS-u0-vra" secondAttribute="leadingMargin" constant="-20" id="SRA-1d-JKh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oqh-Or-LCa" secondAttribute="trailing" constant="-20" id="WGe-ii-Djr"/>
+                            <constraint firstItem="nOe-q6-1xV" firstAttribute="top" secondItem="OdZ-Rq-ZLM" secondAttribute="bottom" constant="8" id="Wfp-jj-19x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nOe-q6-1xV" secondAttribute="trailing" constant="-20" id="Y0y-DU-Pjw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AZQ-EL-q0T" secondAttribute="trailing" constant="-20" id="bfu-nY-Trk"/>
+                            <constraint firstItem="AZQ-EL-q0T" firstAttribute="top" secondItem="2QP-tG-Ggo" secondAttribute="bottom" id="c4O-lL-j5j"/>
+                            <constraint firstItem="AZQ-EL-q0T" firstAttribute="leading" secondItem="OlS-u0-vra" secondAttribute="leadingMargin" constant="10" id="dfQ-1I-dTE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oqh-Or-LCa" secondAttribute="trailing" constant="42" id="mQx-kC-xQJ"/>
+                            <constraint firstItem="Thc-0V-Nsh" firstAttribute="top" secondItem="nOe-q6-1xV" secondAttribute="bottom" id="yEZ-G4-bqC"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBU-yt-DEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="356"/>
+        </scene>
+    </scenes>
+</document>

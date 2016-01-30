@@ -48,6 +48,9 @@ class MainViewController: UIViewController {
   func nextPage(){
     if loginok {
       print("OK")
+      let sb:UIStoryboard = UIStoryboard(name: "Application",bundle:NSBundle.mainBundle())
+      let applicationViewController = sb.instantiateViewControllerWithIdentifier("Main") as! ApplicationViewController
+      self.presentViewController(applicationViewController, animated: true, completion: nil)
     }else{
       print("NG")
     }
