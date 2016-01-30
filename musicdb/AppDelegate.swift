@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  musicdb
 //
-//  Created by 池畑成二郎 on 2016/01/30.
+//  Created by norainu on 2016/01/30.
 //  Copyright © 2016年 norainu. All rights reserved.
 //
 
