@@ -6,5 +6,6 @@ use_frameworks!
 target 'musicdb' do
        pod 'SwiftyJSON', '~> 2.3'
        pod 'MarqueeLabel'
+       pod 'SVProgressHUD'
 end
 

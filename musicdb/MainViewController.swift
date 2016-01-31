@@ -8,6 +8,7 @@
 
 import UIKit
 import LocalAuthentication
+import SVProgressHUD
 
 class MainViewController: UIViewController {
 
@@ -40,9 +41,14 @@ class MainViewController: UIViewController {
     if myAuthContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: nil) {
       myAuthContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "認証", reply: {
         success, error in
-        self.loginok = success
+        SVProgressHUD.showWithStatus("処理中")
+        if success {
+          self.textFieldUserName.text = "seijiro"
+          self.textFiledPassword.text = "hoge"
+        }
+        SVProgressHUD.dismiss()
         print(success)
-        self.nextPage()
+        //self.nextPage()
       })
     }
   }

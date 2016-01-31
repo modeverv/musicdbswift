@@ -9,6 +9,7 @@
 
 import UIKit
 import MarqueeLabel
+import SVProgressHUD
 
 class ApplicationViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,CellDelegate, MyPlayerDelegate ,UISearchBarDelegate{
 
@@ -81,6 +82,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func next(cell: CustomCellTableViewCell) {
+    SVProgressHUD.showWithStatus("処理中")
     switch cell.pageType {
     case .Genre:
       go2Artist(cell.title)
@@ -105,9 +107,11 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
       mode = PageType.Search
     }
     //self.lblDisplay.text = mode.rawValue
+    SVProgressHUD.dismiss()
   }
 
   func back(){
+    SVProgressHUD.showWithStatus("処理中")
     switch mode {
     case .Track:
       print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
@@ -134,6 +138,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     //lblDisplay.text = mode.rawValue
     print("back")
     //self.lblDisplay.text = mode.rawValue
+    SVProgressHUD.dismiss()
   }
 
   func go2Artist(gnr:String){

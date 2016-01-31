@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "musicdb/ApplicationViewController.swift"
-            timestampString = "475921761.029349"
+            timestampString = "475925114.101198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "searchBarSearchButtonClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -168,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "musicdb/ApplicationViewController.swift"
-            timestampString = "475920123.520328"
+            timestampString = "475925114.101198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "play(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -184,12 +184,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "musicdb/ApplicationViewController.swift"
-            timestampString = "475920133.801025"
+            timestampString = "475925114.101198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "next(_:)"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -200,12 +200,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "musicdb/ApplicationViewController.swift"
-            timestampString = "475920989.976485"
+            timestampString = "475925154.950445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "next(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

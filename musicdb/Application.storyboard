@@ -69,7 +69,7 @@
                                     <action selector="bntNextClick:" destination="Pzw-Rl-caH" eventType="touchUpInside" id="c0R-DI-0jT"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="e0H-2x-LYV"/>
