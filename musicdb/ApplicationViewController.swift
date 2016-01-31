@@ -74,10 +74,6 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     self.lblDisplay.text = self.applicationName
   }
 
-  @IBAction func bntClick(sender: AnyObject) {
-    go2Login()
-  }
-
   func enterBackground(notification: NSNotification){
     print("バック")
     myPlayer.pause()
@@ -86,12 +82,6 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   func enterForeground(notification: NSNotification){
     print("ふぉあ")
     myPlayer.pause()
-  }
-
-  func go2Login(){
-    let sb:UIStoryboard = UIStoryboard(name: "Main",bundle:NSBundle.mainBundle())
-    let mainViewController = sb.instantiateViewControllerWithIdentifier("Login") as! MainViewController
-    self.presentViewController(mainViewController, animated: true, completion: nil)
   }
 
   func makeGenreTable(){
