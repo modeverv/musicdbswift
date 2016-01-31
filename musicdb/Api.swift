@@ -30,20 +30,20 @@ class Api {
   }
 
   func getSearchByGenre(qs:String) -> JSON {
-    let qqs = qs.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+    let qqs = qs.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
     let request = NSURLRequest(URL: NSURL(string: self.urlBase + self.pathSearchByGenre + "?p=1&per=10000000000&qs=" + qqs)!)
      do {
       let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
       let jsondata = JSON(data: data)
       return jsondata
-    }catch {
+    } catch {
       print(error)
     }
     return nil
   }
 
   func getSearch(qs:String) -> JSON {
-    let qqs = qs.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+    let qqs = qs.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
     let request = NSURLRequest(URL: NSURL(string: self.urlBase + self.pathSearch + "?p=1&per=10000000000&qs=" + qqs)!)
      do {
       let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)

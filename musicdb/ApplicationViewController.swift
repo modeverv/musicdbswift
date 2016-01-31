@@ -145,19 +145,24 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     self.genre  = gnr
     list = SearchGenreModel.byGenre(gnr)
   }
+
   func go2Album(artist:String){
     self.artist = artist
     list = SearchGenreModel.byArtist(artist)
   }
+
   func go2Track(album:String){
     self.album = album
     list = SearchGenreModel.byAlbum(album)
   }
+
   func startplay(cell:CustomCellTableViewCell){
-    print("startplay:" + cell.pageType.rawValue)
+    SVProgressHUD.showWithStatus("処理中")
+    print("startplay:" + cell.pageType.rawValue);
     let l = SearchGenreModel.makeTrackList(mode,c:cell,_id:cell._id)
     myPlayer.setPlaylist(l)
     myPlayer.play()
+    SVProgressHUD.dismiss()
   }
 
   func tableView(tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
