@@ -9,6 +9,7 @@
 
 import UIKit
 import MarqueeLabel
+import LocalAuthentication
 import SVProgressHUD
 
 class ApplicationViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,CellDelegate, MyPlayerDelegate ,UISearchBarDelegate{
@@ -32,7 +33,6 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   @IBOutlet weak var serchBar: UISearchBar!
   
-  //@IBOutlet weak var lblDisplay: UILabel!
   @IBOutlet weak var lblDisplay: MarqueeLabel!
 
   @IBOutlet weak var tableView: UITableView!
@@ -58,6 +58,9 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     self.tableView.estimatedRowHeight = 300
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "enterBackground:", name:"applicationDidEnterBackground", object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "enterForeground:", name:"applicationWillEnterForeground", object: nil)
+
     tableView.delegate = self
     tableView.dataSource = self
 
@@ -69,6 +72,26 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
     makeGenreTable()
     self.lblDisplay.text = self.applicationName
+  }
+
+  @IBAction func bntClick(sender: AnyObject) {
+    go2Login()
+  }
+
+  func enterBackground(notification: NSNotification){
+    print("バック")
+    myPlayer.pause()
+  }
+
+  func enterForeground(notification: NSNotification){
+    print("ふぉあ")
+    myPlayer.pause()
+  }
+
+  func go2Login(){
+    let sb:UIStoryboard = UIStoryboard(name: "Main",bundle:NSBundle.mainBundle())
+    let mainViewController = sb.instantiateViewControllerWithIdentifier("Login") as! MainViewController
+    self.presentViewController(mainViewController, animated: true, completion: nil)
   }
 
   func makeGenreTable(){
@@ -248,7 +271,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-    self.view.endEditing(true)
+    //self.view.endEditing(true)
     searchBar.resignFirstResponder()
   }
 

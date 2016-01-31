@@ -146,11 +146,11 @@
 			isa = PBXGroup;
 			children = (
 				1779FF1F1C5C82CC00F00317 /* User.swift */,
-				176E23381C5CC035007AC209 /* Genres.swift */,
 				176E233A1C5CC06D007AC209 /* SearchBy.swift */,
 				177E2A5D1C5CFE260070C9EB /* MusicDTO.swift */,
 				177E2A5F1C5D0F1B0070C9EB /* MyPlayer.swift */,
 				17F66C541C5DC28F006CB017 /* MyPlayerDelegate.swift */,
+				176E23381C5CC035007AC209 /* Genres.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";

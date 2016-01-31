@@ -8,7 +8,6 @@
 
 import UIKit
 import LocalAuthentication
-import SVProgressHUD
 
 class MainViewController: UIViewController {
 
@@ -16,11 +15,15 @@ class MainViewController: UIViewController {
 
   @IBOutlet weak var textFiledPassword: UITextField!
 
+  @IBOutlet weak var lblLogin: UILabel!
+
   var loginok:Bool = false;
+  let myAuthContext = LAContext()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     textFiledPassword.secureTextEntry = true;
+    lblLogin.text = ""
     loginCheckWithTouch()
 
   }
@@ -37,16 +40,14 @@ class MainViewController: UIViewController {
   }
 
   func loginCheckWithTouch() {
-    let myAuthContext = LAContext()
     if myAuthContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: nil) {
       myAuthContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "認証", reply: {
         success, error in
-        SVProgressHUD.showWithStatus("処理中")
         if success {
           self.textFieldUserName.text = "seijiro"
           self.textFiledPassword.text = "hoge"
+          self.lblLogin.text = "ログインできます"
         }
-        SVProgressHUD.dismiss()
         print(success)
         //self.nextPage()
       })
@@ -59,6 +60,7 @@ class MainViewController: UIViewController {
       let sb:UIStoryboard = UIStoryboard(name: "Application",bundle:NSBundle.mainBundle())
       let applicationViewController = sb.instantiateViewControllerWithIdentifier("Main") as! ApplicationViewController
       self.presentViewController(applicationViewController, animated: true, completion: nil)
+
     }else{
       print("NG")
     }

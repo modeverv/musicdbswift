@@ -39,10 +39,15 @@ class MyPlayer {
     }
   }
 
+  func pause() {
+    player.pause()
+    isPlaying = false
+  }
+
   func play() -> MusicDTO {
-    //for var i = 0 ; i < playList.count ; i++ {
-    //  print(playList[i].toString())
-    //}
+    for var i = 0 ; i < playList.count ; i++ {
+      print(playList[i].toString())
+    }
     player.pause()
     isPlaying = false
 
@@ -59,7 +64,7 @@ class MyPlayer {
         player.addPeriodicTimeObserverForInterval(time,queue: nil) { (time) -> Void in
           let duration = CMTimeGetSeconds(self.player.currentItem!.duration)
           let time = CMTimeGetSeconds(self.player.currentTime())
-          if(duration == time){
+          if(duration - 2 <= time){
             self.next()
           }
         }
