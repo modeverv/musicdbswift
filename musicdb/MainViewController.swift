@@ -40,8 +40,9 @@ class MainViewController: UIViewController {
     if myAuthContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: nil) {
       myAuthContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "認証", reply: {
         success, error in
-          self.loginok = success
-          self.nextPage()
+        self.loginok = success
+        print(success)
+        self.nextPage()
       })
     }
   }

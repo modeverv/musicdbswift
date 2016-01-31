@@ -1,10 +1,13 @@
 PODS:
+  - MarqueeLabel (2.5.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - MarqueeLabel
   - SwiftyJSON (~> 2.3)
 
 SPEC CHECKSUMS:
+  MarqueeLabel: 6b8ff6915c0536c5099ac30992b7d72f9807df20
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

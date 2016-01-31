@@ -19,7 +19,8 @@ class CustomCellTableViewCell: UITableViewCell {
   var genre = "";
   var artist = "";
   var album = "";
-  var value = "";
+  var _id = "";
+
 
   var pageType:PageType = PageType.Genre
 
@@ -31,6 +32,14 @@ class CustomCellTableViewCell: UITableViewCell {
 
   @IBAction func btnPlay(sender: AnyObject) {
     self.delegate?.play(self)
+  }
+
+  func clear(){
+    title = "";
+    genre = "";
+    artist = "";
+    album = "";
+    _id = "";
   }
 
   func setValues(){
@@ -45,7 +54,6 @@ class CustomCellTableViewCell: UITableViewCell {
       self.txtGenre.text = "";
     } else {
       self.txtGenre.text = "Genre:" + genre;
-      print(genre)
     }
 
     if artist == "" {

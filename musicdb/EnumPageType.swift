@@ -8,10 +8,10 @@
 
 import Foundation
 
-public enum PageType {
-  case Genre
-  case Artist
-  case Album
-  case Track
-  case Search
+public enum PageType :String {
+  case Genre = "Genre",
+  Artist = "Artist",
+  Album = "Album",
+  Track = "Track",
+  Search = "Search"
 }

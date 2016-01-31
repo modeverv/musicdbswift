@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MarqueeLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-musicdb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>52D0866B7B4A75BE29C0B0D6D0AD4221</key>
+		<key>1672DDB57FD65147DBCF548A231F47DB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA7F5780C85D67676362E7CC2A0B23E6</key>
+		<key>4383584C3CC1451D1B531F812C2DFBF1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0EA0DBE4CC14BB311124892C749C9B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
