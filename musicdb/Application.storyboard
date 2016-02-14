@@ -69,7 +69,7 @@
                                     <action selector="bntNextClick:" destination="Pzw-Rl-caH" eventType="touchUpInside" id="c0R-DI-0jT"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="e0H-2x-LYV"/>
@@ -182,7 +182,7 @@
                                     <action selector="bntNextClick:" destination="ZoB-Pv-4bT" eventType="touchUpInside" id="dVr-VM-cTm"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2u-nE-NeQ">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsBookmarkButton="YES" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2u-nE-NeQ">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="EZ7-2b-6jF"/>
@@ -295,7 +295,7 @@
                                     <action selector="bntNextClick:" destination="s5H-wk-SdT" eventType="touchUpInside" id="oxf-zA-OLO"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aof-Ry-jPw">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aof-Ry-jPw">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="PR7-Ae-Cfj"/>
@@ -408,7 +408,7 @@
                                     <action selector="bntNextClick:" destination="zO5-Cw-3Bt" eventType="touchUpInside" id="ftc-Ei-Wn3"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tr-0S-TAB">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tr-0S-TAB">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="yQn-8P-rOI"/>
@@ -521,7 +521,7 @@
                                     <action selector="bntNextClick:" destination="2w3-MG-n2o" eventType="touchUpInside" id="ePn-su-oah"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-qd-UaH">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-qd-UaH">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="t7H-BE-5lv"/>

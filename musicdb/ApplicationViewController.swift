@@ -120,8 +120,8 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   func next(cell: CustomCellTableViewCell) {
     SVProgressHUD.showWithStatus("処理中")
-
-    dispatch_async_global {
+    //dispatch_async_global {
+    dispatch_async_main {
       switch cell.pageType {
       case .Genre:
         let s = NSDate()
@@ -161,8 +161,8 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   func back(){
     SVProgressHUD.showWithStatus("処理中")
-    dispatch_async_global {
-
+    //dispatch_async_global {
+    dispatch_async_main {
       switch self.mode {
       case .Track:
         //print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
@@ -200,16 +200,19 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func go2Artist(gnr:String){
+    SVProgressHUD.showWithStatus("処理中")
     self.genre  = gnr
     list = SearchGenreModel.byGenre(gnr)
   }
 
   func go2Album(artist:String){
+    SVProgressHUD.showWithStatus("処理中")
     self.artist = artist
     list = SearchGenreModel.byArtist(artist)
   }
 
   func go2Track(album:String){
+    SVProgressHUD.showWithStatus("処理中")
     self.album = album
     list = SearchGenreModel.byAlbum(album)
   }
