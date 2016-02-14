@@ -161,6 +161,8 @@ class SearchBy {
     case .Track:
       byAlbum(c.album)
       targetList = albumList
+    case .Undefined:
+      targetList = genreList
     }
     var skiped = false
     var i = 0

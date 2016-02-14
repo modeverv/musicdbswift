@@ -16,15 +16,14 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   let applicationName = "musicdb"
 
-  let GenreModel = Genres()
+  var GenreModel = Genres()
 
-  let SearchGenreModel = SearchBy()
+  var SearchGenreModel = SearchBy()
 
-  let myPlayer = MyPlayer()
+  var myPlayer = MyPlayer()
 
-  let alert = UIAlertView()
-
-  var mode :PageType = PageType.Genre
+  var mode :PageType = PageType.Undefined
+  var mode2 : PageType?
 
   var list :[MusicDTO] = [MusicDTO]();
 
@@ -69,15 +68,25 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     myPlayer.delegate = self
 
     self.serchBar.delegate = self
+    self.serchBar.placeholder = "Search"
+    self.serchBar.autocapitalizationType = UITextAutocapitalizationType.None
+    
 
     let nib = UINib(nibName: "CustomCellTableViewCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
     self.tableView.rowHeight = CGFloat(109.0)
-    makeGenreTable()
-    self.lblDisplay.text = self.applicationName
 
-    alert.title = "debug"
-    alert.addButtonWithTitle("OK")
+    //self.lblDisplay.text = self.applicationName
+
+    if(self.mode2 == nil ){
+      self.mode = PageType.Genre
+    }else{
+      self.mode = self.mode2!
+    }
+    makeGenreTable()
+
+    //self.lblDisplay.text = self.lblDisplay.text! + ":" + self.mode.rawValue
+
   }
 
   func dispatch_async_main(block: () -> ()) {
@@ -99,8 +108,9 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func makeGenreTable(){
-    GenreModel.execute()
-    mode = PageType.Genre
+    if(self.mode == PageType.Genre){
+      GenreModel.execute()
+    }
   }
 
   func play(cell:CustomCellTableViewCell) {
@@ -111,7 +121,6 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   func next(cell: CustomCellTableViewCell) {
     SVProgressHUD.showWithStatus("処理中")
 
-
     dispatch_async_global {
       switch cell.pageType {
       case .Genre:
@@ -119,24 +128,29 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
         self.go2Artist(cell.title)
         self.mode = PageType.Artist
         print("next")
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
         print("next-" + NSDate().timeIntervalSinceDate(s).description)
+        self.go2("Artist")
       case .Artist:
         self.go2Album(cell.artist)
         self.mode = PageType.Album
         print("next")
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
+        self.go2("Album")
       case .Album:
         self.go2Track(cell.album)
         self.mode = PageType.Track
         print("next")
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
+        self.go2("Track")
       case .Track:
         self.startplay(cell)
         self.mode = PageType.Track
       case .Search:
         self.startplay(cell)
         self.mode = PageType.Search
+      case .Undefined:
+        break
       }
 
       //self.lblDisplay.text = mode.rawValue
@@ -154,29 +168,35 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
         //print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
         self.mode = PageType.Album
         self.go2Album(self.artist)
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
+        self.go2("Album")
       case .Album:
         //print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
         self.mode = PageType.Artist
         self.go2Artist(self.genre)
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
+        self.go2("Artist")
       case .Artist:
         //print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
         self.mode = PageType.Genre
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
+        self.go2("Main")
       case .Search:
         //print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
         self.mode = PageType.Genre
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
+        self.go2("Main")
       case .Genre:
         //print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
         self.mode = PageType.Genre
+        SVProgressHUD.dismiss()
+      case .Undefined: break
       }
       //lblDisplay.text = mode.rawValue
       //self.lblDisplay.text = mode.rawValue
 
     }
-    //SVProgressHUD.dismiss()
+
   }
 
   func go2Artist(gnr:String){
@@ -215,7 +235,10 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
       return list.count
     case .Track:
       return list.count
+    case .Undefined:
+      return GenreModel.genres!.count
     }
+
   }
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -267,6 +290,8 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
       c?._id = list[i]._id
       c?.pageType = .Search
       }
+    case .Undefined:
+      c?.clear()
     }
     c?.setValues()
     print("set cell:" + NSDate().timeIntervalSinceDate(s).description)
@@ -297,8 +322,24 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     if let t = searchBar.text {
       list = SearchGenreModel.bySearch(t)
       mode = PageType.Search
-      tableView.reloadData()
+      //tableView.reloadData()
+      go2("Search")
     }
     searchBar.resignFirstResponder()
+  }
+
+  func go2(sceneName:String){
+    SVProgressHUD.dismiss()
+    let c :ApplicationViewController = self.storyboard?.instantiateViewControllerWithIdentifier(sceneName) as! ApplicationViewController
+    c.genre = self.genre
+    c.artist = self.artist
+    c.album = self.album
+    c.track = self.track
+    c.GenreModel = self.GenreModel
+    c.SearchGenreModel = self.SearchGenreModel
+    c.myPlayer = self.myPlayer
+    c.mode2 = self.mode
+    c.list = self.list
+    self.presentViewController(c, animated: true, completion: nil)
   }
 }

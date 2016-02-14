@@ -13,5 +13,6 @@ public enum PageType :String {
   Artist = "Artist",
   Album = "Album",
   Track = "Track",
-  Search = "Search"
+  Search = "Search",
+  Undefined = "Undefined"
 }
