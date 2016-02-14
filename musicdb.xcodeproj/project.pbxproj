@@ -10,6 +10,7 @@
 		174019771C5C956200ED8689 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174019761C5C956200ED8689 /* Application.storyboard */; };
 		174019791C5C959500ED8689 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174019781C5C959500ED8689 /* ApplicationViewController.swift */; };
 		174765061C5E05710048C38E /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174765051C5E05710048C38E /* MarqueeLabel.swift */; };
+		174A2C801C70882D0035800B /* Main2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174A2C7F1C7087CF0035800B /* Main2ViewController.swift */; };
 		176E23311C5CABBB007AC209 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E232F1C5CABBB007AC209 /* CustomCellTableViewCell.swift */; };
 		176E23321C5CABBB007AC209 /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176E23301C5CABBB007AC209 /* CustomCellTableViewCell.xib */; };
 		176E23341C5CB5C7007AC209 /* CellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E23331C5CB5C7007AC209 /* CellDelegate.swift */; };
@@ -34,6 +35,7 @@
 		174019761C5C956200ED8689 /* Application.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
 		174019781C5C959500ED8689 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		174765051C5E05710048C38E /* MarqueeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
+		174A2C7F1C7087CF0035800B /* Main2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main2ViewController.swift; sourceTree = "<group>"; };
 		176E232F1C5CABBB007AC209 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 		176E23301C5CABBB007AC209 /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
 		176E23331C5CB5C7007AC209 /* CellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		1779FF1B1C5C793D00F00317 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				174A2C7F1C7087CF0035800B /* Main2ViewController.swift */,
 				1779FF081C5C784000F00317 /* MainViewController.swift */,
 				174019781C5C959500ED8689 /* ApplicationViewController.swift */,
 			);
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174A2C801C70882D0035800B /* Main2ViewController.swift in Sources */,
 				176E23391C5CC035007AC209 /* Genres.swift in Sources */,
 				176E23341C5CB5C7007AC209 /* CellDelegate.swift in Sources */,
 				1779FF201C5C82CC00F00317 /* User.swift in Sources */,
@@ -378,13 +382,13 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -435,8 +439,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};

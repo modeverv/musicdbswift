@@ -45,9 +45,9 @@ class MyPlayer {
   }
 
   func play() -> MusicDTO {
-    for var i = 0 ; i < playList.count ; i++ {
-      print(playList[i].toString())
-    }
+    //for var i = 0 ; i < playList.count ; i++ {
+    //  print(playList[i].toString())
+    //}
     player.pause()
     isPlaying = false
 
@@ -55,6 +55,7 @@ class MyPlayer {
     let urlString = api.getStreamURLString(m)
 
     do {
+      self.delegate?.display(m.artist + " - " + m.album + " - " + m.title)
       if let url:NSURL = NSURL(string: urlString) {
         let item = AVPlayerItem(URL: url)
         player = AVPlayer(playerItem: item)
@@ -70,7 +71,6 @@ class MyPlayer {
         }
         player.play()
         isPlaying = true
-        self.delegate?.display(m.artist + " - " + m.album + " - " + m.title)
       }
     }
     return m

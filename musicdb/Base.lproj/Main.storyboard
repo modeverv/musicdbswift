@@ -82,5 +82,44 @@
             </objects>
             <point key="canvasLocation" x="139" y="421"/>
         </scene>
+        <!--Main2 View Controller-->
+        <scene sceneID="cCF-Ne-Tx2">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" id="tfE-bK-ddL" customClass="Main2ViewController" customModule="musicdb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hq5-CP-R89"/>
+                        <viewControllerLayoutGuide type="bottom" id="fcz-wX-jN4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M4A-Vb-7OC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログインできます" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhz-XN-MJG">
+                                <rect key="frame" x="232" y="289" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-nn-Weh">
+                                <rect key="frame" x="281" y="318" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="tfE-bK-ddL" eventType="touchUpInside" id="tpf-5z-b4M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fhz-XN-MJG" firstAttribute="centerX" secondItem="M4A-Vb-7OC" secondAttribute="centerX" id="4zm-7B-29L"/>
+                            <constraint firstItem="fhz-XN-MJG" firstAttribute="centerY" secondItem="M4A-Vb-7OC" secondAttribute="centerY" id="b7p-pO-NUY"/>
+                            <constraint firstItem="ewR-nn-Weh" firstAttribute="centerX" secondItem="M4A-Vb-7OC" secondAttribute="centerX" id="pLm-RX-b2y"/>
+                            <constraint firstItem="ewR-nn-Weh" firstAttribute="top" secondItem="fhz-XN-MJG" secondAttribute="bottom" constant="8" id="yUF-vd-ppY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cgk-BS-lKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="433"/>
+        </scene>
     </scenes>
 </document>

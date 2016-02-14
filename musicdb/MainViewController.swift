@@ -44,9 +44,20 @@ class MainViewController: UIViewController {
       myAuthContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "認証", reply: {
         success, error in
         if success {
+
+          // 遷移するViewを定義する.このas!はswift1.2では as?だったかと。
+          let main2ViewController : Main2ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("secondVC") as! Main2ViewController
+          // アニメーションを設定する.
+          //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+          // 値渡ししたい時 hoge -> piyo
+          //secondViewController.piyo = self.hoge
+          // Viewの移動する.
+          self.presentViewController(main2ViewController, animated: true, completion: nil)
+
           self.textFieldUserName.text = "seijiro"
           self.textFiledPassword.text = "hoge"
-          self.lblLogin.text = "ログインできます"
+          //self.lblLogin.text = "ログインできます"
+
         }
         print(success)
         //self.nextPage()

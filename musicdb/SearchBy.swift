@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SearchBy {
-
+  var allList:[MusicDTO] = [MusicDTO](); // contain dtos from server
   var genreList:[MusicDTO] = [MusicDTO]() // contain dtos in same genre
   var artistList:[MusicDTO] = [MusicDTO]() // contain dtos in same genre ,artist
   var albumList:[MusicDTO] = [MusicDTO]() // contain dtos in same genre,artist,album
@@ -18,10 +19,30 @@ class SearchBy {
 
   let api = Api()
 
+  func isOkExt(ext:String) -> Bool {
+    return (
+      ext == ""     ||
+      ext == "ape"  ||
+      ext == "flac" ||
+      ext == "mka"  ||
+      ext == "tta"  ||
+      ext == "tak"
+    );
+  }
+
+  func isSameGenre(genre:String,json:JSON) -> Bool {
+    let gnre:String = json["genre"].string!
+    return genre == gnre;
+  }
+
   // by Genre -> Artist List
   func byGenre(genre:String) -> [MusicDTO] {
+    let start = NSDate()
     genreList = [MusicDTO]()
+    allList = [MusicDTO]()
+    print("1:" + NSDate().timeIntervalSinceDate(start).description)
     var data = api.getSearchByGenre(genre)
+    print("2:" + NSDate().timeIntervalSinceDate(start).description)
     let json = data[1]
     for(var i = 0; i < json.count ; i++) {
       var ext:String
@@ -30,39 +51,37 @@ class SearchBy {
       }else {
         ext = json[i]["ext"].string!
       }
-      let gnr = json[i]["genre"].string!
 
       if(
-        ext == ""     ||
-        ext == "ape"  ||
-        ext == "flac" ||
-        ext == "mka"  ||
-        ext == "tta"  ||
-        ext == "tak"
+        isOkExt(ext)
         ) {
           print("not add:" + ext)
       } else {
-        if (genre == gnr){
-          let d = MusicDTO()
-          d.genre = json[i]["genre"].string!
-          d.artist = json[i]["artist"].string!
-          d.album = json[i]["album"].string!
-          d.title = json[i]["title"].string!
-          d.ext = json[i]["ext"].string!
-          d._id = json[i]["_id"].string!
+        let d = MusicDTO()
+        d.genre = json[i]["genre"].string!
+        d.artist = json[i]["artist"].string!
+        d.album = json[i]["album"].string!
+        d.title = json[i]["title"].string!
+        d.ext = json[i]["ext"].string!
+        d._id = json[i]["_id"].string!
+        allList.append(d)
+        if (isSameGenre(genre,json:json[i])){
           genreList.append(d)
         }
       }
     }
+    print("3:" + NSDate().timeIntervalSinceDate(start).description)
     var gDic:[String:MusicDTO] = [:]
     var gList:[MusicDTO] = [MusicDTO]()
     for var i = 0 ; i < genreList.count ; i++ {
       let d = genreList[i]
       gDic[d.artist] = d
     }
+    print("4:" + NSDate().timeIntervalSinceDate(start).description)
     for (_,d) in gDic {
       gList.append(d)
     }
+    print("5:" + NSDate().timeIntervalSinceDate(start).description)
     return gList
   }
 
@@ -103,11 +122,7 @@ class SearchBy {
     for var i=0 ; i < json.count ; i++ {
       let ext = json[i]["ext"].string!
       if(
-        ext == "ape" ||
-        ext == "flac" ||
-        ext == "mka" ||
-        ext == "tta" ||
-        ext == "tak"
+        isOkExt(ext)
         ) {
           print("not add:" + ext)
       } else {
