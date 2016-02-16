@@ -32,7 +32,8 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   var artist = "";
   var album = "";
   var track = "";
-  var twitter = "";
+  var twitter = ""
+  var search = ""
 
   @IBOutlet weak var serchBar: UISearchBar!
   
@@ -72,11 +73,9 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func tweet(){
-    if(self.twitter != ""){
-      let twitterPostView:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-      twitterPostView.setInitialText(self.twitter + "  #NowPlaying #musicdb")
-      self.presentViewController(twitterPostView, animated: true, completion: nil)
-    }
+    let twitterPostView:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+    twitterPostView.setInitialText(self.twitter + "  #NowPlaying #musicdb")
+    self.presentViewController(twitterPostView, animated: true, completion: nil)
   }
 
   override func viewDidLoad() {
@@ -111,8 +110,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     }
     makeGenreTable()
 
-    //self.lblDisplay.text = self.lblDisplay.text! + ":" + self.mode.rawValue
-
+    self.lblDisplay.text = self.twitter
   }
 
   func dispatch_async_main(block: () -> ()) {
@@ -350,6 +348,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
     if let t = searchBar.text {
+      self.search = t
       list = SearchGenreModel.bySearch(t)
       mode = PageType.Search
       //tableView.reloadData()
@@ -370,6 +369,8 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     c.myPlayer = self.myPlayer
     c.mode2 = self.mode
     c.list = self.list
+    c.twitter = self.twitter
+    c.search = self.search
     self.presentViewController(c, animated: true, completion: nil)
   }
 }
