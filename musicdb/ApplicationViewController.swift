@@ -11,6 +11,7 @@ import UIKit
 import MarqueeLabel
 import LocalAuthentication
 import SVProgressHUD
+import Social
 
 class ApplicationViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,CellDelegate, MyPlayerDelegate ,UISearchBarDelegate{
 
@@ -31,6 +32,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   var artist = "";
   var album = "";
   var track = "";
+  var twitter = "";
 
   @IBOutlet weak var serchBar: UISearchBar!
   
@@ -38,6 +40,22 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   @IBOutlet weak var tableView: UITableView!
 
+  @IBAction func sentTwitter5(sender: AnyObject) {
+    tweet()
+  }
+  @IBAction func sentTwitter4(sender: AnyObject) {
+    tweet()
+  }
+
+  @IBAction func sentTwitter3(sender: AnyObject) {
+    tweet()
+  }
+  @IBAction func sentTwitter2(sender: AnyObject) {
+    tweet()
+  }
+  @IBAction func sendTwitter(sender: AnyObject) {
+    tweet()
+  }
 
   @IBAction func btnPlayPauseClick(sender: AnyObject) {
       myPlayer.playpause()
@@ -51,6 +69,14 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   @IBAction func btnBackClick(sender: AnyObject) {
     back()
+  }
+
+  func tweet(){
+    if(self.twitter != ""){
+      let twitterPostView:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+      twitterPostView.setInitialText(self.twitter + "  #NowPlaying #musicdb")
+      self.presentViewController(twitterPostView, animated: true, completion: nil)
+    }
   }
 
   override func viewDidLoad() {
@@ -306,6 +332,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   func display(str:String) {
     //self.lblDisplay.text = mode.rawValue + " - " + str
     self.lblDisplay.text = str
+    self.twitter = str
   }
 
   override func didReceiveMemoryWarning() {

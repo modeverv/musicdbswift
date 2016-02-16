@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171514AD1C737F6400547156 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171514AC1C737F6400547156 /* Social.framework */; };
 		174019771C5C956200ED8689 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174019761C5C956200ED8689 /* Application.storyboard */; };
 		174019791C5C959500ED8689 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174019781C5C959500ED8689 /* ApplicationViewController.swift */; };
 		174765061C5E05710048C38E /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174765051C5E05710048C38E /* MarqueeLabel.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		171514AC1C737F6400547156 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		174019761C5C956200ED8689 /* Application.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
 		174019781C5C959500ED8689 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		174765051C5E05710048C38E /* MarqueeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171514AD1C737F6400547156 /* Social.framework in Frameworks */,
 				61796E5FD31A9EE0BA57DC17 /* Pods_musicdb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +181,7 @@
 		5BEBCA6EA669F87C35C5508C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				171514AC1C737F6400547156 /* Social.framework */,
 				FFBD4A3A14AE65AEDCDC4DD1 /* Pods_musicdb.framework */,
 			);
 			name = Frameworks;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -80,6 +80,13 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsV-uO-7ZK">
+                                <rect key="frame" x="270" y="90" width="45" height="30"/>
+                                <state key="normal" title="twitter"/>
+                                <connections>
+                                    <action selector="sendTwitter:" destination="Pzw-Rl-caH" eventType="touchUpInside" id="ibI-1m-ngm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -193,6 +200,13 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeZ-dC-21v">
+                                <rect key="frame" x="277" y="90" width="45" height="30"/>
+                                <state key="normal" title="twitter"/>
+                                <connections>
+                                    <action selector="sentTwitter2:" destination="ZoB-Pv-4bT" eventType="touchUpInside" id="GTF-2j-qS9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -230,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dQ-x9-Nr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-53" y="526"/>
+            <point key="canvasLocation" x="-108" y="529"/>
         </scene>
         <!--Application View Controller-->
         <scene sceneID="aVU-iW-YXT">
@@ -306,6 +320,13 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-KY-uNk">
+                                <rect key="frame" x="269" y="90" width="45" height="30"/>
+                                <state key="normal" title="twitter"/>
+                                <connections>
+                                    <action selector="sentTwitter3:" destination="s5H-wk-SdT" eventType="touchUpInside" id="RCO-NK-ALu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -419,6 +440,13 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG3-Xi-x2G">
+                                <rect key="frame" x="278" y="90" width="45" height="30"/>
+                                <state key="normal" title="twitter"/>
+                                <connections>
+                                    <action selector="sentTwitter4:" destination="zO5-Cw-3Bt" eventType="touchUpInside" id="Ii0-XV-icp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -532,6 +560,13 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xA-wb-1uj">
+                                <rect key="frame" x="277" y="90" width="45" height="30"/>
+                                <state key="normal" title="twitter"/>
+                                <connections>
+                                    <action selector="sentTwitter5:" destination="2w3-MG-n2o" eventType="touchUpInside" id="7eR-ud-lFU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

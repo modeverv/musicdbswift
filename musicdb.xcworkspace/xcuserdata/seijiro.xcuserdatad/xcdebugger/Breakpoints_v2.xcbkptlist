@@ -125,7 +125,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
             endingLineNumber = "106"
-            landmarkName = "enterBackground(_:)"
+            landmarkName = "enterForeground(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -141,7 +141,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "enterForeground(_:)"
+            landmarkName = "makeGenreTable()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -157,7 +157,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
-            landmarkName = "dispatch_async_main(_:)"
+            landmarkName = "dispatch_async_global(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -189,8 +189,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
             endingLineNumber = "120"
-            landmarkName = "play(_:)"
-            landmarkType = "5">
+            landmarkName = "ApplicationViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -551,8 +551,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
             endingLineNumber = "115"
-            landmarkName = "makeGenreTable()"
-            landmarkType = "5">
+            landmarkName = "ApplicationViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
