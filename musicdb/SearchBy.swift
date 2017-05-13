@@ -44,7 +44,7 @@ class SearchBy {
     var data = api.getSearchByGenre(genre)
     print("2:" + NSDate().timeIntervalSinceDate(start).description)
     let json = data[1]
-    for(var i = 0; i < json.count ; i++) {
+    for i in 0 ..< json.count  {
       var ext:String
       if json[i]["ext"].string == nil {
         ext = ""
@@ -73,7 +73,7 @@ class SearchBy {
     print("3:" + NSDate().timeIntervalSinceDate(start).description)
     var gDic:[String:MusicDTO] = [:]
     var gList:[MusicDTO] = [MusicDTO]()
-    for var i = 0 ; i < genreList.count ; i++ {
+    for i in 0  ..< genreList.count {
       let d = genreList[i]
       gDic[d.artist] = d
     }
@@ -89,7 +89,7 @@ class SearchBy {
   func byArtist(artist:String) -> [MusicDTO]{
     artistList = [MusicDTO]()
     var aDic:[String:MusicDTO] = [:]
-    for var i=0;i < genreList.count ; i++ {
+    for i in 0 ..< genreList.count {
       let d = genreList[i]
       if( artist == d.artist){
         aDic[d.album] = d
@@ -106,7 +106,7 @@ class SearchBy {
   // by Album -> Track List
   func byAlbum(album:String) -> [MusicDTO] {
     albumList = [MusicDTO]()
-    for var i = 0 ; i < artistList.count ; i++ {
+    for i in 0  ..< artistList.count {
       let d = artistList[i]
       if d.album == album {
         albumList.append(d)
@@ -119,7 +119,7 @@ class SearchBy {
     searchList = [MusicDTO]()
     var data = api.getSearch(qs)
     let json = data[1]
-    for var i=0 ; i < json.count ; i++ {
+    for i in 0  ..< json.count {
       let ext = json[i]["ext"].string!
       if(
         isOkExt(ext)
@@ -166,14 +166,14 @@ class SearchBy {
     }
     var skiped = false
     var i = 0
-    for  ; i < targetList.count ; i++ {
+    for  ; i < targetList.count ; i += 1 {
       let d = targetList[i]
         if( _id == d._id || skiped) {
           trackList.append(d)
           skiped = true
         }
     }
-    for var j = 0 ; j < i ; j++ {
+    for j in 0  ..< i {
       let d = targetList[j]
       trackList.append(d)
     }

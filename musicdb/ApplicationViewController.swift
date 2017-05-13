@@ -84,8 +84,8 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     //self.tableView.estimatedRowHeight = 300
     //self.tableView.rowHeight = UITableViewAutomaticDimension;
 
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "enterBackground:", name:"applicationDidEnterBackground", object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "enterForeground:", name:"applicationWillEnterForeground", object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ApplicationViewController.enterBackground(_:)), name:"applicationDidEnterBackground", object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ApplicationViewController.enterForeground(_:)), name:"applicationWillEnterForeground", object: nil)
 
     tableView.delegate = self
     tableView.dataSource = self

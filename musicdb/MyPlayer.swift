@@ -21,7 +21,7 @@ class MyPlayer {
   
   func setPlaylist(pl:[MusicDTO]){
     self.playList = [MusicDTO]()
-    for var i = 0 ; i < pl.count ; i++ {
+    for i in 0  ..< pl.count {
       self.playList.append(pl[i])
     }
     cursor = 0
@@ -78,7 +78,7 @@ class MyPlayer {
 
   func next(){
     if(playList.count != 0){
-      cursor++
+      cursor += 1
       if cursor > playList.count - 1 {
         cursor = 0
       }
@@ -87,7 +87,7 @@ class MyPlayer {
   }
   func prev(){
     if(playList.count != 0){
-      cursor--
+      cursor -= 1
       if cursor < 0 {
         cursor = playList.count - 1
       }
