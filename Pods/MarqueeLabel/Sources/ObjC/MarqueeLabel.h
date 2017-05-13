@@ -13,11 +13,11 @@ typedef NS_ENUM(NSUInteger, MarqueeType) {
     /** Scrolls left first, then back right to the original position. */
     MLLeftRight = 0,
     /** Scrolls right first, then back left to the original position. */
-    MLRightLeft,
+    MLRightLeft = 1,
     /** Continuously scrolls left (with a pause at the original position if animationDelay is set). See the `trailingBuffer` property to define a spacing between the repeating strings.*/
-    MLContinuous,
+    MLContinuous = 2,
     /** Continuously scrolls right (with a pause at the original position if animationDelay is set). See the `trailingBuffer` property to define a spacing between the repeating strings.*/
-    MLContinuousReverse
+    MLContinuousReverse = 3
 };
 
 
@@ -30,7 +30,8 @@ typedef NS_ENUM(NSUInteger, MarqueeType) {
  for label scrolling direction/looping, speed/rate, and other options.
  */
 
-@interface MarqueeLabel : UILabel
+IB_DESIGNABLE
+@interface MarqueeLabel : UILabel <CAAnimationDelegate>
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name Creating MarqueeLabels
@@ -270,6 +271,18 @@ typedef NS_ENUM(NSUInteger, MarqueeType) {
 /** The length of delay in seconds that the label pauses at the completion of a scroll. */
 
 @property (nonatomic, assign) IBInspectable CGFloat animationDelay;
+
+
+/** The read-only duration of the scroll animation (not including delay). 
+ 
+ The value of this property is calculated when using the `scrollRate` property to set label animation speed. The value of this property
+ is equal to the value of `scrollDuration` property when using the `scrollDuration` property to set label animation speed.
+ 
+ @see scrollDuration
+ @see scrollRate
+ */
+
+@property (nonatomic, readonly) NSTimeInterval animationDuration;
 
 
 

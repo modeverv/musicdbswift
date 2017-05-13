@@ -41,51 +41,51 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   @IBOutlet weak var tableView: UITableView!
 
-  @IBAction func sentTwitter5(sender: AnyObject) {
+  @IBAction func sentTwitter5(_ sender: AnyObject) {
     tweet()
   }
-  @IBAction func sentTwitter4(sender: AnyObject) {
-    tweet()
-  }
-
-  @IBAction func sentTwitter3(sender: AnyObject) {
-    tweet()
-  }
-  @IBAction func sentTwitter2(sender: AnyObject) {
-    tweet()
-  }
-  @IBAction func sendTwitter(sender: AnyObject) {
+  @IBAction func sentTwitter4(_ sender: AnyObject) {
     tweet()
   }
 
-  @IBAction func btnPlayPauseClick(sender: AnyObject) {
+  @IBAction func sentTwitter3(_ sender: AnyObject) {
+    tweet()
+  }
+  @IBAction func sentTwitter2(_ sender: AnyObject) {
+    tweet()
+  }
+  @IBAction func sendTwitter(_ sender: AnyObject) {
+    tweet()
+  }
+
+  @IBAction func btnPlayPauseClick(_ sender: AnyObject) {
       myPlayer.playpause()
   }
-  @IBAction func btnPrev(sender: AnyObject) {
+  @IBAction func btnPrev(_ sender: AnyObject) {
       myPlayer.prev()
   }
-  @IBAction func bntNextClick(sender: AnyObject) {
+  @IBAction func bntNextClick(_ sender: AnyObject) {
       myPlayer.next()
   }
 
-  @IBAction func btnBackClick(sender: AnyObject) {
+  @IBAction func btnBackClick(_ sender: AnyObject) {
     back()
   }
 
   func tweet(){
     let twitterPostView:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
     twitterPostView.setInitialText(self.twitter + "  #NowPlaying #musicdb")
-    self.presentViewController(twitterPostView, animated: true, completion: nil)
+    self.present(twitterPostView, animated: true, completion: nil)
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.view.backgroundColor = UIColor.blackColor()
+    self.view.backgroundColor = UIColor.black
     //self.tableView.estimatedRowHeight = 300
     //self.tableView.rowHeight = UITableViewAutomaticDimension;
 
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ApplicationViewController.enterBackground(_:)), name:"applicationDidEnterBackground", object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ApplicationViewController.enterForeground(_:)), name:"applicationWillEnterForeground", object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(ApplicationViewController.enterBackground(_:)), name:NSNotification.Name(rawValue: "applicationDidEnterBackground"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(ApplicationViewController.enterForeground(_:)), name:NSNotification.Name(rawValue: "applicationWillEnterForeground"), object: nil)
 
     tableView.delegate = self
     tableView.dataSource = self
@@ -94,11 +94,11 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
     self.serchBar.delegate = self
     self.serchBar.placeholder = "Search"
-    self.serchBar.autocapitalizationType = UITextAutocapitalizationType.None
+    self.serchBar.autocapitalizationType = UITextAutocapitalizationType.none
     
 
     let nib = UINib(nibName: "CustomCellTableViewCell", bundle: nil)
-    tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
+    tableView.register(nib, forCellReuseIdentifier: "Cell")
     self.tableView.rowHeight = CGFloat(109.0)
 
     //self.lblDisplay.text = self.applicationName
@@ -113,20 +113,20 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     self.lblDisplay.text = self.twitter
   }
 
-  func dispatch_async_main(block: () -> ()) {
-    dispatch_async(dispatch_get_main_queue(), block)
+  func dispatch_async_main(_ block: @escaping () -> ()) {
+    DispatchQueue.main.async(execute: block)
   }
 
-  func dispatch_async_global(block: () -> ()) {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+  func dispatch_async_global(_ block: @escaping () -> ()) {
+    DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: block)
   }
 
-  func enterBackground(notification: NSNotification){
+  func enterBackground(_ notification: Notification){
     print("バック")
     myPlayer.pause()
   }
 
-  func enterForeground(notification: NSNotification){
+  func enterForeground(_ notification: Notification){
     print("ふぉあ")
     myPlayer.pause()
   }
@@ -137,23 +137,23 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     }
   }
 
-  func play(cell:CustomCellTableViewCell) {
+  func play(_ cell:CustomCellTableViewCell) {
     startplay(cell)
     print("play:")
   }
 
-  func next(cell: CustomCellTableViewCell) {
-    SVProgressHUD.showWithStatus("処理中")
+  func next(_ cell: CustomCellTableViewCell) {
+    SVProgressHUD.show(withStatus: "処理中")
     //dispatch_async_global {
     dispatch_async_main {
       switch cell.pageType {
       case .Genre:
-        let s = NSDate()
+        let s = Date()
         self.go2Artist(cell.title)
         self.mode = PageType.Artist
         print("next")
         //self.tableView.reloadData()
-        print("next-" + NSDate().timeIntervalSinceDate(s).description)
+        print("next-" + Date().timeIntervalSince(s).description)
         self.go2("Artist")
       case .Artist:
         self.go2Album(cell.artist)
@@ -184,7 +184,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func back(){
-    SVProgressHUD.showWithStatus("処理中")
+    SVProgressHUD.show(withStatus: "処理中")
     //dispatch_async_global {
     dispatch_async_main {
       switch self.mode {
@@ -223,33 +223,33 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   }
 
-  func go2Artist(gnr:String){
-    SVProgressHUD.showWithStatus("処理中")
+  func go2Artist(_ gnr:String){
+    SVProgressHUD.show(withStatus: "処理中")
     self.genre  = gnr
     list = SearchGenreModel.byGenre(gnr)
   }
 
-  func go2Album(artist:String){
-    SVProgressHUD.showWithStatus("処理中")
+  func go2Album(_ artist:String){
+    SVProgressHUD.show(withStatus: "処理中")
     self.artist = artist
     list = SearchGenreModel.byArtist(artist)
   }
 
-  func go2Track(album:String){
-    SVProgressHUD.showWithStatus("処理中")
+  func go2Track(_ album:String){
+    SVProgressHUD.show(withStatus: "処理中")
     self.album = album
     list = SearchGenreModel.byAlbum(album)
   }
 
-  func startplay(cell:CustomCellTableViewCell){
-    SVProgressHUD.showWithStatus("処理中")
+  func startplay(_ cell:CustomCellTableViewCell){
+    SVProgressHUD.show(withStatus: "処理中")
     let l = self.SearchGenreModel.makeTrackList(self.mode,c:cell,_id:cell._id)
     self.myPlayer.setPlaylist(l)
     self.myPlayer.play()
     SVProgressHUD.dismiss()
   }
 
-  func tableView(tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
     print("count")
     switch mode {
     case .Genre :
@@ -268,12 +268,12 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   }
 
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let s = NSDate()
-    let c = tableView.dequeueReusableCellWithIdentifier("Cell") as? CustomCellTableViewCell
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let s = Date()
+    let c = tableView.dequeueReusableCell(withIdentifier: "Cell") as? CustomCellTableViewCell
     c?.clear()
     c?.delegate = self
-    print("invoke cell:" + NSDate().timeIntervalSinceDate(s).description)
+    print("invoke cell:" + Date().timeIntervalSince(s).description)
     let i = indexPath.row
     switch mode {
     case .Genre:
@@ -321,13 +321,13 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
       c?.clear()
     }
     c?.setValues()
-    print("set cell:" + NSDate().timeIntervalSinceDate(s).description)
+    print("set cell:" + Date().timeIntervalSince(s).description)
     SVProgressHUD.dismiss()
     return c!
 
   }
 
-  func display(str:String) {
+  func display(_ str:String) {
     //self.lblDisplay.text = mode.rawValue + " - " + str
     self.lblDisplay.text = str
     self.twitter = str
@@ -338,15 +338,15 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     // Dispose of any resources that can be recreated.
   }
   
-  func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
   }
 
-  func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     //self.view.endEditing(true)
     searchBar.resignFirstResponder()
   }
 
-  func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     if let t = searchBar.text {
       self.search = t
       list = SearchGenreModel.bySearch(t)
@@ -357,9 +357,9 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     searchBar.resignFirstResponder()
   }
 
-  func go2(sceneName:String){
+  func go2(_ sceneName:String){
     SVProgressHUD.dismiss()
-    let c :ApplicationViewController = self.storyboard?.instantiateViewControllerWithIdentifier(sceneName) as! ApplicationViewController
+    let c :ApplicationViewController = self.storyboard?.instantiateViewController(withIdentifier: sceneName) as! ApplicationViewController
     c.genre = self.genre
     c.artist = self.artist
     c.album = self.album
@@ -371,6 +371,6 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     c.list = self.list
     c.twitter = self.twitter
     c.search = self.search
-    self.presentViewController(c, animated: true, completion: nil)
+    self.present(c, animated: true, completion: nil)
   }
 }

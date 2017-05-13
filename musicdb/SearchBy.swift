@@ -19,7 +19,7 @@ class SearchBy {
 
   let api = Api()
 
-  func isOkExt(ext:String) -> Bool {
+  func isOkExt(_ ext:String) -> Bool {
     return (
       ext == ""     ||
       ext == "ape"  ||
@@ -30,19 +30,19 @@ class SearchBy {
     );
   }
 
-  func isSameGenre(genre:String,json:JSON) -> Bool {
+  func isSameGenre(_ genre:String,json:JSON) -> Bool {
     let gnre:String = json["genre"].string!
     return genre == gnre;
   }
 
   // by Genre -> Artist List
-  func byGenre(genre:String) -> [MusicDTO] {
-    let start = NSDate()
+  func byGenre(_ genre:String) -> [MusicDTO] {
+    let start = Date()
     genreList = [MusicDTO]()
     allList = [MusicDTO]()
-    print("1:" + NSDate().timeIntervalSinceDate(start).description)
-    var data = api.getSearchByGenre(genre)
-    print("2:" + NSDate().timeIntervalSinceDate(start).description)
+    print("1:" + Date().timeIntervalSince(start).description)
+    var data = api.getSearchByGenre(qs: genre)
+    print("2:" + Date().timeIntervalSince(start).description)
     let json = data[1]
     for i in 0 ..< json.count  {
       var ext:String
@@ -70,23 +70,23 @@ class SearchBy {
         }
       }
     }
-    print("3:" + NSDate().timeIntervalSinceDate(start).description)
+    print("3:" + Date().timeIntervalSince(start).description)
     var gDic:[String:MusicDTO] = [:]
     var gList:[MusicDTO] = [MusicDTO]()
     for i in 0  ..< genreList.count {
       let d = genreList[i]
       gDic[d.artist] = d
     }
-    print("4:" + NSDate().timeIntervalSinceDate(start).description)
+    print("4:" + Date().timeIntervalSince(start).description)
     for (_,d) in gDic {
       gList.append(d)
     }
-    print("5:" + NSDate().timeIntervalSinceDate(start).description)
+    print("5:" + Date().timeIntervalSince(start).description)
     return gList
   }
 
   // by Artist -> Album List
-  func byArtist(artist:String) -> [MusicDTO]{
+  func byArtist(_ artist:String) -> [MusicDTO]{
     artistList = [MusicDTO]()
     var aDic:[String:MusicDTO] = [:]
     for i in 0 ..< genreList.count {
@@ -104,7 +104,7 @@ class SearchBy {
   }
 
   // by Album -> Track List
-  func byAlbum(album:String) -> [MusicDTO] {
+  func byAlbum(_ album:String) -> [MusicDTO] {
     albumList = [MusicDTO]()
     for i in 0  ..< artistList.count {
       let d = artistList[i]
@@ -115,7 +115,7 @@ class SearchBy {
     return albumList
   }
 
-  func bySearch(qs:String) -> [MusicDTO] {
+  func bySearch(_ qs:String) -> [MusicDTO] {
     searchList = [MusicDTO]()
     var data = api.getSearch(qs)
     let json = data[1]
@@ -140,7 +140,7 @@ class SearchBy {
     return searchList
   }
 
-  func makeTrackList(type:PageType,c:CustomCellTableViewCell,_id:String = "") -> [MusicDTO] {
+  func makeTrackList(_ type:PageType,c:CustomCellTableViewCell,_id:String = "") -> [MusicDTO] {
     trackList = [MusicDTO]()
     var targetList:[MusicDTO]
     switch type {
@@ -166,7 +166,7 @@ class SearchBy {
     }
     var skiped = false
     var i = 0
-    for  ; i < targetList.count ; i += 1 {
+    for  i in  0 ..< targetList.count {
       let d = targetList[i]
         if( _id == d._id || skiped) {
           trackList.append(d)

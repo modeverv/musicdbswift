@@ -16,7 +16,7 @@
             startingLineNumber = "17"
             endingLineNumber = "17"
             landmarkName = "login(_:password:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,7 +32,7 @@
             startingLineNumber = "18"
             endingLineNumber = "18"
             landmarkName = "login(_:password:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -14,12 +14,12 @@ class MyPlayer {
   var cursor = 0
   let api = Api()
   var isPlaying = false
-  var timer:NSTimer = NSTimer()
+  var timer:Timer = Timer()
   var player :AVPlayer = AVPlayer()
 
   weak var delegate : MyPlayerDelegate?
   
-  func setPlaylist(pl:[MusicDTO]){
+  func setPlaylist(_ pl:[MusicDTO]){
     self.playList = [MusicDTO]()
     for i in 0  ..< pl.count {
       self.playList.append(pl[i])
@@ -56,13 +56,13 @@ class MyPlayer {
 
     do {
       self.delegate?.display(m.artist + " - " + m.album + " - " + m.title)
-      if let url:NSURL = NSURL(string: urlString) {
-        let item = AVPlayerItem(URL: url)
+      if let url:URL = URL(string: urlString) {
+        let item = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: item)
 
         let time = CMTimeMake(60, 60)
 
-        player.addPeriodicTimeObserverForInterval(time,queue: nil) { (time) -> Void in
+        player.addPeriodicTimeObserver(forInterval: time,queue: nil) { (time) -> Void in
           let duration = CMTimeGetSeconds(self.player.currentItem!.duration)
           let time = CMTimeGetSeconds(self.player.currentTime())
           if(duration - 2 <= time){

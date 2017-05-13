@@ -11,5 +11,5 @@ import UIKit
 // CellDelegate プロトコルを記述
 @objc protocol MyPlayerDelegate {
   // デリゲートメソッド定義
-  func display(s:String)
+  func display(_ s:String)
 }

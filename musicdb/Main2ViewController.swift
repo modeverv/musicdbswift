@@ -10,14 +10,14 @@ import UIKit
 
 class Main2ViewController: UIViewController {
 
-  @IBAction func loginAction(sender: AnyObject) {
+  @IBAction func loginAction(_ sender: AnyObject) {
       nextPage()
   }
 
   func nextPage(){
-      let sb:UIStoryboard = UIStoryboard(name: "Application",bundle:NSBundle.mainBundle())
-      let applicationViewController = sb.instantiateViewControllerWithIdentifier("Main") as! ApplicationViewController
-      self.presentViewController(applicationViewController, animated: true, completion: nil)
+      let sb:UIStoryboard = UIStoryboard(name: "Application",bundle:Bundle.main)
+      let applicationViewController = sb.instantiateViewController(withIdentifier: "Main") as! ApplicationViewController
+      self.present(applicationViewController, animated: true, completion: nil)
 
   }
 

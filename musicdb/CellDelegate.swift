@@ -11,6 +11,6 @@ import UIKit
 // CellDelegate プロトコルを記述
 @objc protocol CellDelegate {
   // デリゲートメソッド定義
-  func play(cell:CustomCellTableViewCell)
-  func next(cell:CustomCellTableViewCell)
+  func play(_ cell:CustomCellTableViewCell)
+  func next(_ cell:CustomCellTableViewCell)
 }

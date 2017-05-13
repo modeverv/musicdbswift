@@ -13,7 +13,7 @@ class User  {
 
   // ログインメソッド
   // @return ログイン成功:true / ログイン失敗:false
-  func login(username:String,password:String) -> Bool {
+  func login(_ username:String,password:String) -> Bool {
     if(username == "seijiro" && password == "hoge") {
       return true;
     }

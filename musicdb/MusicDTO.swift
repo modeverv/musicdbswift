@@ -17,6 +17,6 @@ class MusicDTO {
   var _id:String = ""
 
   func toString() -> String {
-    return [genre,artist,album,title,ext,_id].joinWithSeparator(" - ")
+    return [genre,artist,album,title,ext,_id].joined(separator: " - ")
   }
 }

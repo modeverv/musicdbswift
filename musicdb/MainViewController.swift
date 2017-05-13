@@ -22,14 +22,14 @@ class MainViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    textFiledPassword.secureTextEntry = true;
+    textFiledPassword.isSecureTextEntry = true;
     lblLogin.text = ""
     loginCheckWithTouch()
 
   }
 
   // ログインアクション
-  @IBAction func loginAction(sender: AnyObject) {
+  @IBAction func loginAction(_ sender: AnyObject) {
     let user = User();
     if let username = textFieldUserName.text {
       if let password = textFiledPassword.text {
@@ -40,19 +40,19 @@ class MainViewController: UIViewController {
   }
 
   func loginCheckWithTouch() {
-    if myAuthContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: nil) {
-      myAuthContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "認証", reply: {
+    if myAuthContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+      myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "認証", reply: {
         success, error in
         if success {
 
           // 遷移するViewを定義する.このas!はswift1.2では as?だったかと。
-          let main2ViewController : Main2ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("secondVC") as! Main2ViewController
+          let main2ViewController : Main2ViewController = self.storyboard?.instantiateViewController(withIdentifier: "secondVC") as! Main2ViewController
           // アニメーションを設定する.
           //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
           // 値渡ししたい時 hoge -> piyo
           //secondViewController.piyo = self.hoge
           // Viewの移動する.
-          self.presentViewController(main2ViewController, animated: true, completion: nil)
+          self.present(main2ViewController, animated: true, completion: nil)
 
           self.textFieldUserName.text = "seijiro"
           self.textFiledPassword.text = "hoge"
@@ -68,9 +68,9 @@ class MainViewController: UIViewController {
   func nextPage(){
     if loginok {
       print("OK")
-      let sb:UIStoryboard = UIStoryboard(name: "Application",bundle:NSBundle.mainBundle())
-      let applicationViewController = sb.instantiateViewControllerWithIdentifier("Main") as! ApplicationViewController
-      self.presentViewController(applicationViewController, animated: true, completion: nil)
+      let sb:UIStoryboard = UIStoryboard(name: "Application",bundle:Bundle.main)
+      let applicationViewController = sb.instantiateViewController(withIdentifier: "Main") as! ApplicationViewController
+      self.present(applicationViewController, animated: true, completion: nil)
 
     }else{
       print("NG")
