@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 class Api {
-  //let urlBase = "https://seijiro:hoge@modeverv.aa0.netvolante.jp/musicdb_dev/"
+  //let urlBase = "https://seijiro:hoge@lovesaemi.daemon.asia/musicdb_dev/"
   let urlBase = "https://lovesaemi.daemon.asia/musicdb_dev/"
   let pathGenre = "api/genres"
   let pathSearchByGenre = "api/search_by_genre"

@@ -27,6 +27,9 @@ class MainViewController: UIViewController {
     loginCheckWithTouch()
 
   }
+  func setLoginOK(){
+    self.loginok = true
+  }
 
   // ログインアクション
   @IBAction func loginAction(_ sender: AnyObject) {
@@ -40,29 +43,16 @@ class MainViewController: UIViewController {
   }
 
   func loginCheckWithTouch() {
+    print("touch")
     if myAuthContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-      myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "認証", reply: {
-        success, error in
-        if success {
-
-          // 遷移するViewを定義する.このas!はswift1.2では as?だったかと。
-          //let main2ViewController : Main2ViewController = self.storyboard?.instantiateViewController(withIdentifier: "secondVC") as! Main2ViewController
-          // アニメーションを設定する.
-          //secondViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-          // 値渡ししたい時 hoge -> piyo
-          //secondViewController.piyo = self.hoge
-          // Viewの移動する.
-          //self.present(main2ViewController, animated: true, completion: nil)
-
-          self.textFieldUserName.text = "seijiro"
-          self.textFiledPassword.text = "hoge"
-          //self.lblLogin.text = "ログインできます"
-          let user = User();
-
-          self.loginok = user.login("seijiro", password: "hoge");
-          self.nextPage()
-        }
-        print(success)
+      myAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "認証", reply:
+        { (success, error) in
+          if success {
+          DispatchQueue.main.async {
+            self.loginok = true
+            self.nextPage()
+            }
+          }
       })
     }
   }
