@@ -11,7 +11,8 @@ import SwiftyJSON
 
 class Api {
   //let urlBase = "https://seijiro:hoge@lovesaemi.daemon.asia/musicdb_dev/"
-  let urlBase = "https://lovesaemi.daemon.asia/musicdb_dev/"
+  let urlBase = "https://seijiro:hoge@lovesaemi.daemon.asia/musicdb_dev/"
+  let urlBase2 = "https://lovesaemi.daemon.asia/"
   let pathGenre = "api/genres"
   let pathSearchByGenre = "api/search_by_genre"
   let pathSearch = "api/search"
@@ -56,7 +57,8 @@ class Api {
   }
 
   func getStreamURLString(_ dto:MusicDTO) -> String {
-    return urlBase + "api/stream/" + dto._id + "/file." + dto.ext
+    print(urlBase2 + "stream/musicdb/" + dto._id + "/file." + dto.ext)
+    return urlBase2 + "stream/musicdb/" + dto._id + "/file." + dto.ext
   }
 
 }

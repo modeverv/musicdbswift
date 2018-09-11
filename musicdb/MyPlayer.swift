@@ -15,13 +15,15 @@ class MyPlayer {
   let api = Api()
   var isPlaying = false
   var timer:Timer = Timer()
-  var player :AVPlayer = AVPlayer()
+  var player :AVPlayer = AVPlayer(url: URL(string: "https://lovesaemi.daemon.asia/stream/musicdb/5b8ab8c11d41c8b93e000072/file.m4a")!)
 
   weak var delegate : MyPlayerDelegate?
   
   func setPlaylist(_ pl:[MusicDTO]){
+    print("set playlist is called")
     self.playList = [MusicDTO]()
     for i in 0  ..< pl.count {
+      print(pl[i].title)
       self.playList.append(pl[i])
     }
     cursor = 0
@@ -45,20 +47,29 @@ class MyPlayer {
   }
 
   func play() -> MusicDTO {
+    print("play is called")
     //for var i = 0 ; i < playList.count ; i++ {
     //  print(playList[i].toString())
     //}
-    player.pause()
-    isPlaying = false
 
     let m = playList[cursor]
     let urlString = api.getStreamURLString(m)
 
+print("1")
+    print(urlString)
+    do {
+      player.pause()
+    }
+    isPlaying = false
+
     do {
       self.delegate?.display(m.artist + " - " + m.album + " - " + m.title)
       if let url:URL = URL(string: urlString) {
-        let item = AVPlayerItem(url: url)
+        let asset = AVURLAsset(url: url)
+        let item = AVPlayerItem(asset: asset)
         player = AVPlayer(playerItem: item)
+print("2")
+        player.allowsExternalPlayback = false
 
         let time = CMTimeMake(60, 60)
 

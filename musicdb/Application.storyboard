@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application View Controller-->
@@ -15,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Thc-0V-Nsh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OlS-u0-vra">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZQ-EL-q0T" customClass="MarqueeLabel" customModule="musicdb" customModuleProvider="target">
-                                <rect key="frame" x="6" y="20" width="586" height="21"/>
+                                <rect key="frame" x="2" y="44" width="369" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -27,15 +31,15 @@
                                     <constraint firstAttribute="height" constant="21" id="wWD-MV-NkH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-q6-1xV">
-                                <rect key="frame" x="0.0" y="128" width="600" height="472"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="-4" y="152" width="383" height="626"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tp-XK-SPd">
-                                <rect key="frame" x="6" y="90" width="95" height="30"/>
+                                <rect key="frame" x="2" y="114" width="95" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="4Jm-fW-uQr"/>
                                     <constraint firstAttribute="height" constant="30" id="fXJ-WE-e9d"/>
@@ -46,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZg-mW-nZJ">
-                                <rect key="frame" x="220" y="90" width="34" height="30"/>
+                                <rect key="frame" x="216" y="114" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="ndm-Nk-656"/>
                                 </constraints>
@@ -56,20 +60,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-Dt-Sap">
-                                <rect key="frame" x="109" y="90" width="30" height="30"/>
+                                <rect key="frame" x="105" y="114" width="30" height="30"/>
                                 <state key="normal" title="&lt;&lt;"/>
                                 <connections>
                                     <action selector="btnPrev:" destination="Pzw-Rl-caH" eventType="touchUpInside" id="DDl-oS-vmc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdZ-Rq-ZLM">
-                                <rect key="frame" x="157" y="90" width="30" height="30"/>
+                                <rect key="frame" x="153" y="114" width="30" height="30"/>
                                 <state key="normal" title="&gt;&gt;"/>
                                 <connections>
                                     <action selector="bntNextClick:" destination="Pzw-Rl-caH" eventType="touchUpInside" id="c0R-DI-0jT"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="e0H-2x-LYV"/>
@@ -81,14 +85,15 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsV-uO-7ZK">
-                                <rect key="frame" x="270" y="90" width="45" height="30"/>
+                                <rect key="frame" x="269" y="112" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="twitter"/>
                                 <connections>
                                     <action selector="sendTwitter:" destination="Pzw-Rl-caH" eventType="touchUpInside" id="ibI-1m-ngm"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nOe-q6-1xV" firstAttribute="top" secondItem="7Tp-XK-SPd" secondAttribute="bottom" constant="8" id="0lm-2x-LK0"/>
                             <constraint firstItem="7Tp-XK-SPd" firstAttribute="top" secondItem="oqh-Or-LCa" secondAttribute="bottom" id="4an-q3-kr7"/>
@@ -115,7 +120,6 @@
                             <constraint firstItem="Thc-0V-Nsh" firstAttribute="top" secondItem="nOe-q6-1xV" secondAttribute="bottom" id="yEZ-G4-bqC"/>
                         </constraints>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="lblDisplay" destination="AZQ-EL-q0T" id="qqt-cP-Jh0"/>
                         <outlet property="serchBar" destination="oqh-Or-LCa" id="UcE-wT-tcW"/>
@@ -135,11 +139,11 @@
                         <viewControllerLayoutGuide type="bottom" id="vtb-5t-NhZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0eC-p6-nPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAH-TV-2cR" customClass="MarqueeLabel" customModule="musicdb" customModuleProvider="target">
-                                <rect key="frame" x="6" y="20" width="586" height="21"/>
+                                <rect key="frame" x="2" y="44" width="369" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -147,15 +151,15 @@
                                     <constraint firstAttribute="height" constant="21" id="NRh-JF-6b2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1h0-my-qse">
-                                <rect key="frame" x="0.0" y="128" width="600" height="472"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="-4" y="152" width="383" height="626"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntj-TM-n96">
-                                <rect key="frame" x="6" y="90" width="95" height="30"/>
+                                <rect key="frame" x="2" y="114" width="95" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="5AQ-XL-VwY"/>
                                     <constraint firstAttribute="height" constant="30" id="uhQ-kl-idP"/>
@@ -166,7 +170,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P5-gv-JdE">
-                                <rect key="frame" x="220" y="90" width="34" height="30"/>
+                                <rect key="frame" x="216" y="114" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="Kl8-Yi-9zQ"/>
                                 </constraints>
@@ -176,20 +180,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REX-bs-r2N">
-                                <rect key="frame" x="109" y="90" width="30" height="30"/>
+                                <rect key="frame" x="105" y="114" width="30" height="30"/>
                                 <state key="normal" title="&lt;&lt;"/>
                                 <connections>
                                     <action selector="btnPrev:" destination="ZoB-Pv-4bT" eventType="touchUpInside" id="EUq-sJ-u9T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0a-yb-osm">
-                                <rect key="frame" x="157" y="90" width="30" height="30"/>
+                                <rect key="frame" x="153" y="114" width="30" height="30"/>
                                 <state key="normal" title="&gt;&gt;"/>
                                 <connections>
                                     <action selector="bntNextClick:" destination="ZoB-Pv-4bT" eventType="touchUpInside" id="dVr-VM-cTm"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsBookmarkButton="YES" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2u-nE-NeQ">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" searchBarStyle="prominent" showsBookmarkButton="YES" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2u-nE-NeQ">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="EZ7-2b-6jF"/>
@@ -201,14 +205,15 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeZ-dC-21v">
-                                <rect key="frame" x="277" y="90" width="45" height="30"/>
+                                <rect key="frame" x="268" y="113" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="twitter"/>
                                 <connections>
                                     <action selector="sentTwitter2:" destination="ZoB-Pv-4bT" eventType="touchUpInside" id="GTF-2j-qS9"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vtb-5t-NhZ" firstAttribute="top" secondItem="1h0-my-qse" secondAttribute="bottom" id="0O8-Hi-bRp"/>
                             <constraint firstItem="QAH-TV-2cR" firstAttribute="top" secondItem="lyd-cU-GhA" secondAttribute="bottom" id="1Ki-lI-Wud"/>
@@ -235,7 +240,6 @@
                             <constraint firstItem="1h0-my-qse" firstAttribute="top" secondItem="x0a-yb-osm" secondAttribute="bottom" constant="8" id="zwA-LF-UYt"/>
                         </constraints>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="lblDisplay" destination="QAH-TV-2cR" id="HbX-kt-GWj"/>
                         <outlet property="serchBar" destination="j2u-nE-NeQ" id="dFg-TY-a0Z"/>
@@ -255,11 +259,11 @@
                         <viewControllerLayoutGuide type="bottom" id="USY-bO-PwY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8EI-VX-DOJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edE-8v-uYi" customClass="MarqueeLabel" customModule="musicdb" customModuleProvider="target">
-                                <rect key="frame" x="6" y="20" width="586" height="21"/>
+                                <rect key="frame" x="2" y="44" width="369" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -267,15 +271,15 @@
                                     <constraint firstAttribute="height" constant="21" id="xkD-50-Vsq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VDl-lQ-0D9">
-                                <rect key="frame" x="0.0" y="128" width="600" height="472"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="-4" y="152" width="383" height="626"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52m-dd-bBs">
-                                <rect key="frame" x="6" y="90" width="95" height="30"/>
+                                <rect key="frame" x="2" y="114" width="95" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="8Ca-G2-gLd"/>
                                     <constraint firstAttribute="height" constant="30" id="QxF-Ff-Oqc"/>
@@ -286,7 +290,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hod-6Y-drM">
-                                <rect key="frame" x="220" y="90" width="34" height="30"/>
+                                <rect key="frame" x="216" y="114" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="Gdm-5A-hqg"/>
                                 </constraints>
@@ -296,20 +300,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dU-vN-ueR">
-                                <rect key="frame" x="109" y="90" width="30" height="30"/>
+                                <rect key="frame" x="105" y="114" width="30" height="30"/>
                                 <state key="normal" title="&lt;&lt;"/>
                                 <connections>
                                     <action selector="btnPrev:" destination="s5H-wk-SdT" eventType="touchUpInside" id="Mdf-4U-dik"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVP-Sk-sHX">
-                                <rect key="frame" x="157" y="90" width="30" height="30"/>
+                                <rect key="frame" x="153" y="114" width="30" height="30"/>
                                 <state key="normal" title="&gt;&gt;"/>
                                 <connections>
                                     <action selector="bntNextClick:" destination="s5H-wk-SdT" eventType="touchUpInside" id="oxf-zA-OLO"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aof-Ry-jPw">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aof-Ry-jPw">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="PR7-Ae-Cfj"/>
@@ -322,13 +326,14 @@
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-KY-uNk">
                                 <rect key="frame" x="269" y="90" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="twitter"/>
                                 <connections>
                                     <action selector="sentTwitter3:" destination="s5H-wk-SdT" eventType="touchUpInside" id="RCO-NK-ALu"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aof-Ry-jPw" firstAttribute="leading" secondItem="8EI-VX-DOJ" secondAttribute="leadingMargin" constant="-14" id="4c5-5q-rOe"/>
                             <constraint firstItem="WVP-Sk-sHX" firstAttribute="top" secondItem="aof-Ry-jPw" secondAttribute="bottom" id="BTd-TK-YUN"/>
@@ -355,7 +360,6 @@
                             <constraint firstItem="52m-dd-bBs" firstAttribute="leading" secondItem="8EI-VX-DOJ" secondAttribute="leadingMargin" constant="-14" id="uch-KC-ymF"/>
                         </constraints>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="lblDisplay" destination="edE-8v-uYi" id="cDF-H5-tZa"/>
                         <outlet property="serchBar" destination="aof-Ry-jPw" id="frh-Lv-sJ3"/>
@@ -375,11 +379,11 @@
                         <viewControllerLayoutGuide type="bottom" id="jlZ-sc-cyM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4ov-7J-wZ5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXc-En-BHp" customClass="MarqueeLabel" customModule="musicdb" customModuleProvider="target">
-                                <rect key="frame" x="6" y="20" width="586" height="21"/>
+                                <rect key="frame" x="2" y="44" width="369" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -387,15 +391,15 @@
                                     <constraint firstAttribute="height" constant="21" id="UgA-di-Kbt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGv-kq-IH4">
-                                <rect key="frame" x="0.0" y="128" width="600" height="472"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="-4" y="152" width="383" height="626"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmL-mm-GH4">
-                                <rect key="frame" x="6" y="90" width="95" height="30"/>
+                                <rect key="frame" x="2" y="114" width="95" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="1sc-CM-nZI"/>
                                     <constraint firstAttribute="height" constant="30" id="Urg-Ey-zBQ"/>
@@ -406,7 +410,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP2-nb-aN6">
-                                <rect key="frame" x="220" y="90" width="34" height="30"/>
+                                <rect key="frame" x="216" y="114" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="PV4-hg-2iQ"/>
                                 </constraints>
@@ -416,20 +420,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idW-EF-1Ka">
-                                <rect key="frame" x="109" y="90" width="30" height="30"/>
+                                <rect key="frame" x="105" y="114" width="30" height="30"/>
                                 <state key="normal" title="&lt;&lt;"/>
                                 <connections>
                                     <action selector="btnPrev:" destination="zO5-Cw-3Bt" eventType="touchUpInside" id="QtG-gH-BNE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-JI-Whp">
-                                <rect key="frame" x="157" y="90" width="30" height="30"/>
+                                <rect key="frame" x="153" y="114" width="30" height="30"/>
                                 <state key="normal" title="&gt;&gt;"/>
                                 <connections>
                                     <action selector="bntNextClick:" destination="zO5-Cw-3Bt" eventType="touchUpInside" id="ftc-Ei-Wn3"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tr-0S-TAB">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tr-0S-TAB">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="yQn-8P-rOI"/>
@@ -441,14 +445,15 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG3-Xi-x2G">
-                                <rect key="frame" x="278" y="90" width="45" height="30"/>
+                                <rect key="frame" x="277" y="113" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="twitter"/>
                                 <connections>
                                     <action selector="sentTwitter4:" destination="zO5-Cw-3Bt" eventType="touchUpInside" id="Ii0-XV-icp"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3Tr-0S-TAB" firstAttribute="leading" secondItem="4ov-7J-wZ5" secondAttribute="leadingMargin" constant="-14" id="0ZC-uC-FMX"/>
                             <constraint firstItem="tGv-kq-IH4" firstAttribute="leading" secondItem="4ov-7J-wZ5" secondAttribute="leadingMargin" constant="-20" id="20Z-WJ-Msc"/>
@@ -475,7 +480,6 @@
                             <constraint firstItem="jlZ-sc-cyM" firstAttribute="top" secondItem="tGv-kq-IH4" secondAttribute="bottom" id="zj3-dd-Z52"/>
                         </constraints>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="lblDisplay" destination="xXc-En-BHp" id="dC1-Na-eig"/>
                         <outlet property="serchBar" destination="3Tr-0S-TAB" id="K07-3b-B0Y"/>
@@ -495,11 +499,11 @@
                         <viewControllerLayoutGuide type="bottom" id="uyB-qW-Ygp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1xF-uq-LYN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFF-gp-NcD" customClass="MarqueeLabel" customModule="musicdb" customModuleProvider="target">
-                                <rect key="frame" x="6" y="20" width="586" height="21"/>
+                                <rect key="frame" x="2" y="44" width="369" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -507,15 +511,15 @@
                                     <constraint firstAttribute="height" constant="21" id="iZi-XC-ueT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xqQ-5X-DiD">
-                                <rect key="frame" x="0.0" y="128" width="600" height="472"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="-4" y="152" width="383" height="626"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0d-ua-Xi7">
-                                <rect key="frame" x="6" y="90" width="95" height="30"/>
+                                <rect key="frame" x="2" y="114" width="95" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="F7F-SS-Xsz"/>
                                     <constraint firstAttribute="height" constant="30" id="Ryb-bd-uyB"/>
@@ -526,7 +530,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b69-eJ-Zkd">
-                                <rect key="frame" x="220" y="90" width="34" height="30"/>
+                                <rect key="frame" x="216" y="114" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="sSF-Qs-SMx"/>
                                 </constraints>
@@ -536,20 +540,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-RP-7Cn">
-                                <rect key="frame" x="109" y="90" width="30" height="30"/>
+                                <rect key="frame" x="105" y="114" width="30" height="30"/>
                                 <state key="normal" title="&lt;&lt;"/>
                                 <connections>
                                     <action selector="btnPrev:" destination="2w3-MG-n2o" eventType="touchUpInside" id="ef0-qv-Pfb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rw-SF-ozz">
-                                <rect key="frame" x="157" y="90" width="30" height="30"/>
+                                <rect key="frame" x="153" y="114" width="30" height="30"/>
                                 <state key="normal" title="&gt;&gt;"/>
                                 <connections>
                                     <action selector="bntNextClick:" destination="2w3-MG-n2o" eventType="touchUpInside" id="ePn-su-oah"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-qd-UaH">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" searchBarStyle="prominent" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBM-qd-UaH">
                                 <rect key="frame" x="6" y="46" width="586" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="t7H-BE-5lv"/>
@@ -561,14 +565,15 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xA-wb-1uj">
-                                <rect key="frame" x="277" y="90" width="45" height="30"/>
+                                <rect key="frame" x="277" y="113" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="twitter"/>
                                 <connections>
                                     <action selector="sentTwitter5:" destination="2w3-MG-n2o" eventType="touchUpInside" id="7eR-ud-lFU"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xqQ-5X-DiD" firstAttribute="centerX" secondItem="1xF-uq-LYN" secondAttribute="centerX" id="0a9-IE-n9A"/>
                             <constraint firstItem="EYg-RP-7Cn" firstAttribute="leading" secondItem="G0d-ua-Xi7" secondAttribute="trailing" constant="8" id="1aB-AZ-jec"/>
@@ -595,7 +600,6 @@
                             <constraint firstItem="xqQ-5X-DiD" firstAttribute="top" secondItem="7Rw-SF-ozz" secondAttribute="bottom" constant="8" id="zYv-o6-OwS"/>
                         </constraints>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="lblDisplay" destination="jFF-gp-NcD" id="dY4-Ah-lCJ"/>
                         <outlet property="serchBar" destination="iBM-qd-UaH" id="qXK-4D-olM"/>

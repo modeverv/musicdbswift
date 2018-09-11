@@ -245,6 +245,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     SVProgressHUD.show(withStatus: "処理中")
     let l = self.SearchGenreModel.makeTrackList(self.mode,c:cell,_id:cell._id)
     self.myPlayer.setPlaylist(l)
+    print("set playlist")
     self.myPlayer.play()
     SVProgressHUD.dismiss()
   }
