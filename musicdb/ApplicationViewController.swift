@@ -13,6 +13,22 @@ import LocalAuthentication
 import SVProgressHUD
 import Social
 
+extension UISearchBar {
+  var textField: UITextField? {
+    return value(forKey: "_searchField") as? UITextField
+  }
+}
+extension UITextField {
+  //クリアボタン
+  var rightButton: UIButton? {
+    return value(forKey: "_clearButton") as? UIButton
+  }
+  //虫眼鏡
+  var lupeImageView: UIImageView? {
+    return leftView as? UIImageView
+  }
+}
+
 class ApplicationViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,CellDelegate, MyPlayerDelegate ,UISearchBarDelegate{
 
   let applicationName = "musicdb"
@@ -35,7 +51,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   var twitter = ""
   var search = ""
 
-  @IBOutlet weak var serchBar: UISearchBar!
+  @IBOutlet weak var searchBar: UISearchBar!
   
   @IBOutlet weak var lblDisplay: MarqueeLabel!
 
@@ -92,9 +108,9 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
     myPlayer.delegate = self
 
-    self.serchBar.delegate = self
-    self.serchBar.placeholder = "Search"
-    self.serchBar.autocapitalizationType = UITextAutocapitalizationType.none
+    self.searchBar.delegate = self
+    self.searchBar.placeholder = "Search"
+    self.searchBar.autocapitalizationType = UITextAutocapitalizationType.none
     
 
     let nib = UINib(nibName: "CustomCellTableViewCell", bundle: nil)
@@ -111,6 +127,21 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     makeGenreTable()
 
     self.lblDisplay.text = self.twitter
+    //self.serchBar.removeFromSuperview()
+
+    //１個上のサブビュー取得
+    for subview1 in self.searchBar.subviews {
+      //２個上のサブビュー取得
+      for subview2 in subview1.subviews {
+        //UIImageViewかどうか判定
+        if(subview2.isKind(of: UIImageView.self)){
+          let imageView:UIImageView = subview2 as! UIImageView
+          //透明にする
+          imageView.alpha = 0
+        }
+      }
+    }
+    searchBar.textField?.rightButton?.tintColor = UIColor.white
   }
 
   func dispatch_async_main(_ block: @escaping () -> ()) {
