@@ -1,0 +1,5 @@
+target 'musicdb' do
+  pod 'SwiftyJSON'
+  pod 'MarqueeLabel'
+  pod 'SVProgressHUD'
+end

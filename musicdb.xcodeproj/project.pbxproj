@@ -11,7 +11,6 @@
 		174019771C5C956200ED8689 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174019761C5C956200ED8689 /* Application.storyboard */; };
 		174019791C5C959500ED8689 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174019781C5C959500ED8689 /* ApplicationViewController.swift */; };
 		174A2C801C70882D0035800B /* Main2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174A2C7F1C7087CF0035800B /* Main2ViewController.swift */; };
-		174BF9EB1EC7032F00117851 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174BF9EA1EC7032F00117851 /* SwiftyJSON.swift */; };
 		176E23311C5CABBB007AC209 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E232F1C5CABBB007AC209 /* CustomCellTableViewCell.swift */; };
 		176E23321C5CABBB007AC209 /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176E23301C5CABBB007AC209 /* CustomCellTableViewCell.xib */; };
 		176E23341C5CB5C7007AC209 /* CellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E23331C5CB5C7007AC209 /* CellDelegate.swift */; };
@@ -29,7 +28,7 @@
 		177E2A5E1C5CFE260070C9EB /* MusicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E2A5D1C5CFE260070C9EB /* MusicDTO.swift */; };
 		177E2A601C5D0F1B0070C9EB /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E2A5F1C5D0F1B0070C9EB /* MyPlayer.swift */; };
 		17F66C551C5DC28F006CB017 /* MyPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F66C541C5DC28F006CB017 /* MyPlayerDelegate.swift */; };
-		540642526E7BA71DACAEA4F9 /* Pods_musicdb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DDD4B68E841ABDA79460CE /* Pods_musicdb.framework */; };
+		AF1AFC759F09667BFEB63D56 /* Pods_musicdb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79815F02EC7663AEB8D84FEB /* Pods_musicdb.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,9 @@
 		174019761C5C956200ED8689 /* Application.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
 		174019781C5C959500ED8689 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		174A2C7F1C7087CF0035800B /* Main2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main2ViewController.swift; sourceTree = "<group>"; };
-		174BF9EA1EC7032F00117851 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		175BE99421E74914009F9CE2 /* libMarqueeLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMarqueeLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		175BE99621E74918009F9CE2 /* libSVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSVProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		175BE99821E7491C009F9CE2 /* libSwiftyJSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSwiftyJSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		176E232F1C5CABBB007AC209 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 		176E23301C5CABBB007AC209 /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
 		176E23331C5CB5C7007AC209 /* CellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDelegate.swift; sourceTree = "<group>"; };
@@ -57,8 +58,8 @@
 		177E2A5D1C5CFE260070C9EB /* MusicDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDTO.swift; sourceTree = "<group>"; };
 		177E2A5F1C5D0F1B0070C9EB /* MyPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayer.swift; sourceTree = "<group>"; };
 		17F66C541C5DC28F006CB017 /* MyPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerDelegate.swift; sourceTree = "<group>"; };
-		54DDD4B68E841ABDA79460CE /* Pods_musicdb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicdb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55062E3363117E0803CD7D9D /* Pods-musicdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicdb.release.xcconfig"; path = "Pods/Target Support Files/Pods-musicdb/Pods-musicdb.release.xcconfig"; sourceTree = "<group>"; };
+		79815F02EC7663AEB8D84FEB /* Pods_musicdb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicdb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944A95E2294196179C128C9E /* Pods-musicdb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicdb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-musicdb/Pods-musicdb.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171514AD1C737F6400547156 /* Social.framework in Frameworks */,
-				540642526E7BA71DACAEA4F9 /* Pods_musicdb.framework in Frameworks */,
+				AF1AFC759F09667BFEB63D56 /* Pods_musicdb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +79,6 @@
 		174765041C5E055E0048C38E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				174BF9EA1EC7032F00117851 /* SwiftyJSON.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -190,8 +190,11 @@
 		5BEBCA6EA669F87C35C5508C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				175BE99821E7491C009F9CE2 /* libSwiftyJSON.a */,
+				175BE99621E74918009F9CE2 /* libSVProgressHUD.a */,
+				175BE99421E74914009F9CE2 /* libMarqueeLabel.a */,
 				171514AC1C737F6400547156 /* Social.framework */,
-				54DDD4B68E841ABDA79460CE /* Pods_musicdb.framework */,
+				79815F02EC7663AEB8D84FEB /* Pods_musicdb.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,8 +210,7 @@
 				1779FEFF1C5C784000F00317 /* Sources */,
 				1779FF001C5C784000F00317 /* Frameworks */,
 				1779FF011C5C784000F00317 /* Resources */,
-				9B85C9476BF4446C8A3A191B /* [CP] Embed Pods Frameworks */,
-				F5F1418A4B6CC458C7BAB895 /* [CP] Copy Pods Resources */,
+				C5AD16C455BA5F00F456FCAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,7 +228,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = norainu;
 				TargetAttributes = {
 					1779FF021C5C784000F00317 = {
@@ -276,15 +278,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9B85C9476BF4446C8A3A191B /* [CP] Embed Pods Frameworks */ = {
+		C5AD16C455BA5F00F456FCAE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-musicdb/Pods-musicdb-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -297,28 +310,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-musicdb-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F5F1418A4B6CC458C7BAB895 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-musicdb/Pods-musicdb-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -339,7 +340,6 @@
 				1779FF091C5C784000F00317 /* MainViewController.swift in Sources */,
 				176E233F1C5CC1BD007AC209 /* Api.swift in Sources */,
 				1779FF071C5C784000F00317 /* AppDelegate.swift in Sources */,
-				174BF9EB1EC7032F00117851 /* SwiftyJSON.swift in Sources */,
 				176E23311C5CABBB007AC209 /* CustomCellTableViewCell.swift in Sources */,
 				176E23371C5CB6F9007AC209 /* EnumPageType.swift in Sources */,
 				176E233B1C5CC06D007AC209 /* SearchBy.swift in Sources */,
@@ -377,13 +377,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -408,7 +418,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos10.0;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -421,13 +431,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -446,7 +466,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos10.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;

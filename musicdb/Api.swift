@@ -22,12 +22,12 @@ class Api {
     let request = URLRequest(url: url)
      do {
       let data = try NSURLConnection.sendSynchronousRequest(request, returning: nil)
-      let jsondata = JSON(data: data)
+      let jsondata = try JSON(data: data)
       return jsondata
     }catch {
       print(error)
     }
-    return nil
+    return JSON()
   }
 
   func getSearchByGenre(  qs:String) -> JSON {
@@ -35,12 +35,12 @@ class Api {
     let request = URLRequest(url: URL(string: self.urlBase + self.pathSearchByGenre + "?p=1&per=10000000000&qs=" + qqs)!)
      do {
       let data = try NSURLConnection.sendSynchronousRequest(request, returning: nil)
-      let jsondata = JSON(data: data)
+      let jsondata = try JSON(data: data)
       return jsondata
     } catch {
       print(error)
     }
-    return nil
+    return JSON()
   }
 
   func getSearch(_ qs:String) -> JSON {
@@ -48,12 +48,12 @@ class Api {
     let request = URLRequest(url: URL(string: self.urlBase + self.pathSearch + "?p=1&per=10000000000&qs=" + qqs)!)
      do {
       let data = try NSURLConnection.sendSynchronousRequest(request, returning: nil)
-      let jsondata = JSON(data: data)
+      let jsondata = try JSON(data: data)
       return jsondata
     }catch {
       print(error)
     }
-    return nil
+    return JSON()
   }
 
   func getStreamURLString(_ dto:MusicDTO) -> String {
