@@ -152,12 +152,12 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: block)
   }
 
-  func enterBackground(_ notification: Notification){
+  @objc func enterBackground(_ notification: Notification){
     print("バック")
     myPlayer.pause()
   }
 
-  func enterForeground(_ notification: Notification){
+  @objc func enterForeground(_ notification: Notification){
     print("ふぉあ")
     myPlayer.pause()
   }
