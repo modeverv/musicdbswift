@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 class MyPlayer {
   var playList:[MusicDTO] = [MusicDTO]()
@@ -41,6 +42,10 @@ class MyPlayer {
     }
   }
 
+  func playplay() {
+    player.play()
+  }
+
   func pause() {
     player.pause()
     isPlaying = false
@@ -64,12 +69,36 @@ print("1")
 
     do {
       self.delegate?.display(m.artist + " - " + m.album + " - " + m.title)
+
+      MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+        MPMediaItemPropertyTitle: m.title,
+        MPMediaItemPropertyArtist : m.album + " / " + m.artist,
+      ]
+
       if let url:URL = URL(string: urlString) {
         let asset = AVURLAsset(url: url)
         let item = AVPlayerItem(asset: asset)
         player = AVPlayer(playerItem: item)
 print("2")
-        player.allowsExternalPlayback = false
+        player.allowsExternalPlayback = true
+        /// バックグラウンドでも再生できるカテゴリに設定する
+        let session = AVAudioSession.sharedInstance()
+        do {
+          try session.setCategory(AVAudioSessionCategoryPlayback)
+        } catch  {
+          // エラー処理
+          print("カテゴリ設定バックグランド失敗")
+          fatalError("カテゴリ設定失敗")
+        }
+
+        // sessionのアクティブ化
+        do {
+          try session.setActive(true)
+        } catch {
+          // audio session有効化失敗時の処理
+          // (ここではエラーとして停止している）
+          fatalError("session有効化失敗")
+        }
 
         let time = CMTimeMake(60, 60)
 
@@ -79,6 +108,12 @@ print("2")
           if(duration - 2 <= time){
             self.next()
           }
+          MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+            MPMediaItemPropertyTitle: m.title,
+            MPMediaItemPropertyArtist : m.album + " / " + m.artist,
+            MPNowPlayingInfoPropertyPlaybackRate : NSNumber(value: 1.0), //再生レート
+            MPMediaItemPropertyPlaybackDuration : NSNumber(value: duration) //シークバー
+          ]
         }
         player.play()
         isPlaying = true

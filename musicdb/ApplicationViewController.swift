@@ -12,6 +12,7 @@ import MarqueeLabel
 import LocalAuthentication
 import SVProgressHUD
 import Social
+import MediaPlayer
 
 extension UISearchBar {
   var textField: UITextField? {
@@ -142,6 +143,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
       }
     }
     searchBar.textField?.rightButton?.tintColor = UIColor.white
+
   }
 
   func dispatch_async_main(_ block: @escaping () -> ()) {
@@ -154,12 +156,12 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   @objc func enterBackground(_ notification: Notification){
     print("バック")
-    myPlayer.pause()
+    //myPlayer.pause()
   }
 
   @objc func enterForeground(_ notification: Notification){
     print("ふぉあ")
-    myPlayer.pause()
+    //myPlayer.pause()
   }
 
   func makeGenreTable(){
@@ -405,4 +407,73 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     c.search = self.search
     self.present(c, animated: true, completion: nil)
   }
+
+  // MARK: Remote Command Event
+  func addRemoteCommandEvent() -> MPRemoteCommandCenter {
+    let commandCenter = MPRemoteCommandCenter.shared()
+    commandCenter.togglePlayPauseCommand.addTarget(self, action: #selector(type(of: self).remoteTogglePlayPause(_:)))
+    commandCenter.playCommand.addTarget(self, action: #selector(type(of: self).remotePlay(_:)))
+    commandCenter.pauseCommand.addTarget(self, action: #selector(type(of: self).remotePause(_:)))
+    commandCenter.nextTrackCommand.addTarget(self, action: #selector(type(of: self).remoteNextTrack(_:)))
+    commandCenter.previousTrackCommand.addTarget(self, action: #selector(type(of: self).remotePrevTrack(_:)))
+    return commandCenter
+  }
+
+  @objc func remoteTogglePlayPause(_ event: MPRemoteCommandEvent) {
+    print("remoteTogglePlayPause")
+    // イヤホンのセンターボタンを押した時の処理
+    print("イヤホンのセンターボタンを押した時の処理")
+    // （今回は再生中なら停止、停止中なら再生をおこなっています）
+    myPlayer.playpause()
+
+  }
+
+  @objc func remotePlay(_ event: MPRemoteCommandEvent) {
+    print("remotePlay")
+    // プレイボタンが押された時の処理
+    myPlayer.playplay()
+  }
+
+  @objc func remotePause(_ event: MPRemoteCommandEvent) {
+    print("remotePause")
+    // ポーズボタンが押された時の処理
+    print("ポーズが押された時の処理")
+    myPlayer.pause()
+  }
+  var nextGamaned = false
+  @objc func remoteNextTrack(_ event: MPRemoteCommandEvent) {
+    // 「次へ」ボタンが押された時の処理
+    print("remoteNextTrack")
+//    if(nextGamaned){
+      myPlayer.next()
+//    }
+    nextGamaned = !nextGamaned
+  }
+  var prevGamaned = false
+  @objc func remotePrevTrack(_ event: MPRemoteCommandEvent) {
+    // 「前へ」ボタンが押された時の処理
+    print("remotePrevTrack")
+//    if(prevGamaned){
+      myPlayer.prev()
+//    }
+    prevGamaned = !prevGamaned
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    addRemoteCommandEvent()
+  }
+  override func viewWillDisappear(_ animated: Bool) {
+    let commandCenter = MPRemoteCommandCenter.shared()
+    commandCenter.togglePlayPauseCommand.removeTarget(self)
+    commandCenter.playCommand.removeTarget(self)
+    commandCenter.pauseCommand.removeTarget(self)
+    commandCenter.nextTrackCommand.removeTarget(self)
+    commandCenter.previousTrackCommand.removeTarget(self)
+    //[commandCenter.nextTrackCommand removeTarget:self];
+    //[commandCenter.previousTrackCommand removeTarget:self];
+  }
+
 }
+
+
+
