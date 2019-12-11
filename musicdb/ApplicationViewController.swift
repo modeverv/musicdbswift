@@ -16,7 +16,11 @@ import MediaPlayer
 
 extension UISearchBar {
   var textField: UITextField? {
-    return value(forKey: "_searchField") as? UITextField
+    if #available(iOS 13.0, *) {
+        return searchTextField
+    } else {
+        return value(forKey: "_searchField") as? UITextField
+    }
   }
 }
 extension UITextField {
@@ -411,11 +415,34 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   // MARK: Remote Command Event
   func addRemoteCommandEvent() -> MPRemoteCommandCenter {
     let commandCenter = MPRemoteCommandCenter.shared()
+/*
     commandCenter.togglePlayPauseCommand.addTarget(self, action: #selector(type(of: self).remoteTogglePlayPause(_:)))
     commandCenter.playCommand.addTarget(self, action: #selector(type(of: self).remotePlay(_:)))
     commandCenter.pauseCommand.addTarget(self, action: #selector(type(of: self).remotePause(_:)))
     commandCenter.nextTrackCommand.addTarget(self, action: #selector(type(of: self).remoteNextTrack(_:)))
     commandCenter.previousTrackCommand.addTarget(self, action: #selector(type(of: self).remotePrevTrack(_:)))
+*/
+    commandCenter.togglePlayPauseCommand.addTarget{(ev) -> MPRemoteCommandHandlerStatus in
+      self.remoteTogglePlayPause(ev)
+      return .success
+    }
+    commandCenter.playCommand.addTarget{(ev) -> MPRemoteCommandHandlerStatus in
+      self.remotePlay(ev)
+      return .success
+    }
+    commandCenter.pauseCommand.addTarget{(ev) -> MPRemoteCommandHandlerStatus in
+      self.remotePause(ev)
+      return .success
+    }
+    commandCenter.nextTrackCommand.addTarget{(ev) -> MPRemoteCommandHandlerStatus in
+      self.remoteNextTrack(ev)
+      return .success
+    }
+    commandCenter.previousTrackCommand.addTarget{(ev) -> MPRemoteCommandHandlerStatus in
+      self.remotePrevTrack(ev)
+      return .success
+    }
+
     return commandCenter
   }
 
@@ -425,7 +452,6 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     print("イヤホンのセンターボタンを押した時の処理")
     // （今回は再生中なら停止、停止中なら再生をおこなっています）
     myPlayer.playpause()
-
   }
 
   @objc func remotePlay(_ event: MPRemoteCommandEvent) {
@@ -445,7 +471,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     // 「次へ」ボタンが押された時の処理
     print("remoteNextTrack")
 //    if(nextGamaned){
-      myPlayer.next()
+    myPlayer.next()
 //    }
     nextGamaned = !nextGamaned
   }
@@ -454,23 +480,27 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     // 「前へ」ボタンが押された時の処理
     print("remotePrevTrack")
 //    if(prevGamaned){
-      myPlayer.prev()
+    myPlayer.prev()
 //    }
     prevGamaned = !prevGamaned
   }
 
   override func viewDidAppear(_ animated: Bool) {
+    let commandCenter = MPRemoteCommandCenter.shared()
+    commandCenter.togglePlayPauseCommand.removeTarget(nil)
+    commandCenter.playCommand.removeTarget(nil)
+    commandCenter.pauseCommand.removeTarget(nil)
+    commandCenter.nextTrackCommand.removeTarget(nil)
+    commandCenter.previousTrackCommand.removeTarget(nil)
     addRemoteCommandEvent()
   }
   override func viewWillDisappear(_ animated: Bool) {
     let commandCenter = MPRemoteCommandCenter.shared()
-    commandCenter.togglePlayPauseCommand.removeTarget(self)
-    commandCenter.playCommand.removeTarget(self)
-    commandCenter.pauseCommand.removeTarget(self)
-    commandCenter.nextTrackCommand.removeTarget(self)
-    commandCenter.previousTrackCommand.removeTarget(self)
-    //[commandCenter.nextTrackCommand removeTarget:self];
-    //[commandCenter.previousTrackCommand removeTarget:self];
+  commandCenter.togglePlayPauseCommand.removeTarget(nil)
+  commandCenter.playCommand.removeTarget(nil)
+  commandCenter.pauseCommand.removeTarget(nil)
+  commandCenter.nextTrackCommand.removeTarget(nil)
+  commandCenter.previousTrackCommand.removeTarget(nil)
   }
 
 }

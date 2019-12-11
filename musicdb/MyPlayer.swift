@@ -17,6 +17,7 @@ class MyPlayer {
   var isPlaying = false
   var timer:Timer = Timer()
   var player :AVPlayer = AVPlayer(url: URL(string: "https://lovesaemi.daemon.asia/stream/musicdb/5b8ab8c11d41c8b93e000072/file.m4a")!)
+  var dur = 0.0
 
   weak var delegate : MyPlayerDelegate?
   
@@ -47,6 +48,20 @@ class MyPlayer {
   }
 
   func pause() {
+/*
+    print(self.player.currentTime().seconds)
+    let m = playList[cursor]
+    self.dur = self.player.currentTime().seconds
+    var duration = CMTimeGetSeconds(self.player.currentItem!.duration)
+    let time = CMTimeGetSeconds(self.player.currentTime())
+    MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+      MPMediaItemPropertyTitle: m.title,
+      MPMediaItemPropertyArtist : m.album + " / " + m.artist,
+      MPNowPlayingInfoPropertyPlaybackRate : NSNumber(value: 1.0), //再生レート
+      MPMediaItemPropertyPlaybackDuration : NSNumber(value: duration), //シークバー
+      MPNowPlayingInfoPropertyElapsedPlaybackTime: self.player.currentTime().seconds
+    ]
+*/
     player.pause()
     isPlaying = false
   }
@@ -70,16 +85,17 @@ print("1")
     do {
       self.delegate?.display(m.artist + " - " + m.album + " - " + m.title)
 
-      MPNowPlayingInfoCenter.default().nowPlayingInfo = [
-        MPMediaItemPropertyTitle: m.title,
-        MPMediaItemPropertyArtist : m.album + " / " + m.artist,
-      ]
+//      MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+//        MPMediaItemPropertyTitle: m.title,
+//        MPMediaItemPropertyArtist : m.album + " / " + m.artist,
+//      ]
 
       if let url:URL = URL(string: urlString) {
         let asset = AVURLAsset(url: url)
         let item = AVPlayerItem(asset: asset)
         player = AVPlayer(playerItem: item)
 print("2")
+
         player.allowsExternalPlayback = true
         /// バックグラウンドでも再生できるカテゴリに設定する
         let session = AVAudioSession.sharedInstance()
@@ -91,6 +107,7 @@ print("2")
           fatalError("カテゴリ設定失敗")
         }
 
+print("3")
         // sessionのアクティブ化
         do {
           try session.setActive(true)
@@ -100,10 +117,12 @@ print("2")
           fatalError("session有効化失敗")
         }
 
+print("4")
+
         let time = CMTimeMake(60, 60)
 
         player.addPeriodicTimeObserver(forInterval: time,queue: nil) { (time) -> Void in
-          let duration = CMTimeGetSeconds(self.player.currentItem!.duration)
+          var duration = CMTimeGetSeconds(self.player.currentItem!.duration)
           let time = CMTimeGetSeconds(self.player.currentTime())
           if(duration - 2 <= time){
             self.next()
@@ -112,9 +131,13 @@ print("2")
             MPMediaItemPropertyTitle: m.title,
             MPMediaItemPropertyArtist : m.album + " / " + m.artist,
             MPNowPlayingInfoPropertyPlaybackRate : NSNumber(value: 1.0), //再生レート
-            MPMediaItemPropertyPlaybackDuration : NSNumber(value: duration) //シークバー
+            MPMediaItemPropertyPlaybackDuration : NSNumber(value: duration), //シークバー
+            MPNowPlayingInfoPropertyElapsedPlaybackTime: self.player.currentTime().seconds
           ]
         }
+
+print("5")
+
         player.play()
         isPlaying = true
       }
