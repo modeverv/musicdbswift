@@ -127,13 +127,33 @@ print("4")
           if(duration - 2 <= time){
             self.next()
           }
-          MPNowPlayingInfoCenter.default().nowPlayingInfo = [
-            MPMediaItemPropertyTitle: m.title,
-            MPMediaItemPropertyArtist : m.album + " / " + m.artist,
-            MPNowPlayingInfoPropertyPlaybackRate : NSNumber(value: 1.0), //再生レート
-            MPMediaItemPropertyPlaybackDuration : NSNumber(value: duration), //シークバー
-            MPNowPlayingInfoPropertyElapsedPlaybackTime: self.player.currentTime().seconds
-          ]
+
+          var nowPlayingInfo: [String: Any] = [:]
+          let metadataList = item.asset.metadata
+          nowPlayingInfo[MPMediaItemPropertyTitle] = m.title
+          nowPlayingInfo[MPMediaItemPropertyArtist] = m.album + " / " + m.artist
+          nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = NSNumber(value: 1.0) //再生レート
+          nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = NSNumber(value: duration) //シークバー
+          nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = self.player.currentTime().seconds
+
+
+          for i in metadataList {
+              switch i.commonKey {
+              case .commonKeyArtwork?:
+                  if let data = i.dataValue,
+                      let image = UIImage(data: data) {
+                    if #available(iOS 10.0, *) {
+                      nowPlayingInfo[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(boundsSize: image.size) { _ in image }
+                    } else {
+                      // Fallback on earlier versions
+                    }
+                  }
+              case .none: break
+              default: break
+              }
+          }
+          let audioInfo = MPNowPlayingInfoCenter.default()
+          audioInfo.nowPlayingInfo = nowPlayingInfo
         }
 
 print("5")
