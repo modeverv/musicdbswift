@@ -83,7 +83,7 @@ print("1")
     isPlaying = false
 
     do {
-      self.delegate?.display(m.artist + " - " + m.album + " - " + m.title)
+      self.delegate?.display(m.title + " - " + m.album + " / " + m.artist)
 
 //      MPNowPlayingInfoCenter.default().nowPlayingInfo = [
 //        MPMediaItemPropertyTitle: m.title,
