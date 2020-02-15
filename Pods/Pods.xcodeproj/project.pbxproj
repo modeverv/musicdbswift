@@ -3,395 +3,437 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0125AA7E90682182C8F51A246841421D /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = A25F75F34330F7539F9BC47E551866EA /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03010F87283CB7527F3DE7BC117D7A15 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F55B96F9FD27342C0F09BBB7DEE1AE /* QuartzCore.framework */; };
-		115751F6906492365AC094BBEBA60D05 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56CB339F2AD44482933BE111956870 /* SwiftyJSON.swift */; };
-		1CDD7B2D19883EE5E42C26722419F826 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9120400488D2EB4A9D62D103B16F0F94 /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23293D7C85EB142CA9FFDDA6538E9276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D8B915FF40EB401BFF7A6C07CC4BAC /* Foundation.framework */; };
-		33DEE880ED25745BE1F833ADDB32225A /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5894095FA9650DB4528EF0955810BA3D /* MarqueeLabel.m */; };
-		36C5173DF8C697B9A184BBE23755D945 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3907D979FE2EC2B51E6FFB98D38446C /* SVIndefiniteAnimatedView.m */; };
-		4E171D4DCB6EF3F90ACD5BCD5C9C6F13 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 69B0405E00CCD845FBBEB0167DB2DAB0 /* SVProgressHUD.bundle */; };
-		4F1FF95235AABA58B41BFBB839EDAF24 /* Pods-musicdb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A49B8945F4AEC8617FBDB4AF66063163 /* Pods-musicdb-dummy.m */; };
-		5017E707CE545C1BD02E1AFB7C680C61 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B61ACB5E6D4892EC6503ADC392B7D1A2 /* SwiftyJSON-dummy.m */; };
-		531C495AE342ABFF5DA17EA864BEDD56 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CD255AED9BD7B1A13232FEF5FB4C00C /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E7511F06568F74845BCA111E3334BD5 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4803F250EE7C80626B93724DC8EDB606 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7AA57A5D4D381A959E0097FF0CC96062 /* MarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13614482B2CA05B10ECBF8484E816B66 /* MarqueeLabel-dummy.m */; };
-		7DD24796A54B9890404AD7AE618B7E5D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F30BA19A3BCFA8B1A64E31D9C1778EA9 /* SVProgressHUD.m */; };
-		846753F0112758E72E6B746C225DC97E /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9333B55CE42FB50507530541E3222035 /* SVRadialGradientLayer.m */; };
-		9953C81A057274311B04694AF0B8C638 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1209D6311A67B9F1D2C8A152B5C378F /* SVProgressHUD-dummy.m */; };
-		9A983C7F4FD93F76C2C7DA2A58C2D339 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D8B915FF40EB401BFF7A6C07CC4BAC /* Foundation.framework */; };
-		A626A56885C96E8B73D4275EDAF32F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D8B915FF40EB401BFF7A6C07CC4BAC /* Foundation.framework */; };
-		B4D79857952DA8DDE64B16BF09672D90 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0ED897E4F16DDEF1A93D3596FF2FD5 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9219E4935E22A7BF6DFE8B143FA0B05 /* Pods-musicdb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2F4E8BCCE416A372740CC5B2CB075CD /* Pods-musicdb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF137E06A9F2BBA66D57FCBDF4BAE431 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F55B96F9FD27342C0F09BBB7DEE1AE /* QuartzCore.framework */; };
-		D24014C82803007265EDD9E56551709E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53654F6C69F2B1C06A517CAB5691730 /* UIKit.framework */; };
-		D806958AC3318B80B8DB22DF82FC8139 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8088010836638765FBB58CDF9F223868 /* SVProgressAnimatedView.m */; };
-		E12230205D73E9DC38733545826BAF7F /* MarqueeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2674E05FA3F92D98F393CCDA18A6FEB1 /* MarqueeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E58FEEA4B8DC97B0A3C50A697911D483 /* MarqueeLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F774623358127FF1DFE00788926A81D /* MarqueeLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E68A1199FC352AA7D4DCF0F1956990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D8B915FF40EB401BFF7A6C07CC4BAC /* Foundation.framework */; };
-		F1C2A7943A6371615D51E9943FF8B448 /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C2DA7E88C3848FDA61CCCD43BC7007 /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24D234DADB4B8414313AD30C5ACD98F7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBDE4C47EB761704179D0F6F21645E /* Extensions.swift */; };
+		2ACE41406E36758EED08A0C5834E4780 /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F0D65FD1729B8CDBE91D2C2470713 /* KRActivityIndicatorView.swift */; };
+		369D65F930C4BBC790A9B0FDF4A1A876 /* KRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC527E29EFC7BDB66CF5BDE5137AFF92 /* KRProgressHUD.swift */; };
+		407B90BFDAE37B4230AF1E961B7D3973 /* KRProgressHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74D87A22132F093F99C049D268C854 /* KRProgressHUDViewController.swift */; };
+		4E9A8B51FE2AE2B567C70E7F946F4DBB /* KRProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA47C4E6F229DE22FE1567AF236C2E65 /* KRProgressHUD-dummy.m */; };
+		5BB560B8F9D6242C930B6243193FB7F3 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023632724D33A85520537984A34FC18 /* SwiftyJSON.swift */; };
+		6389DF3A831BD2858C9D5B956BC12694 /* KRProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F6996C42B88BEA687833622106E7366A /* KRProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68718EAE53E10328B8151861297D8411 /* InnerKRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632E4BE81BB652563ABC227E9331E0FB /* InnerKRProgressHUD.swift */; };
+		94C52DA893EE907AA459C4D139035E73 /* Pods-musicdb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4126B10720AEDEDD70A3DE91D08FCEB1 /* Pods-musicdb-dummy.m */; };
+		97DE1D91512721CF78373B8C641C2A29 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21401E29BECBCB81EF0501F54E0489E7 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D722CEF0752AEA7629A5DF8D83F4050 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B9375263647D8B89F2A523BE782E /* SwiftyJSON-dummy.m */; };
+		9D8C90542A8D3D93A786E37F4F763D61 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A675A2C0564BB9FAC909262C1A15B5BA /* MarqueeLabel.swift */; };
+		B64C10CB28211BE255B1694770C8B67F /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B56AD6B7E7D56400D97E99DF786358 /* KRActivityIndicatorViewStyle.swift */; };
+		BA0FA7AEED9A08D0637E014E27929332 /* MarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D13BF4AD806FA087C0353F2F2D8ACA /* MarqueeLabel-dummy.m */; };
+		BB10447BD49BA68DFE44BD1D2210369F /* MarqueeLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBC05DBC038F851223ADAD03A2D340A5 /* MarqueeLabel-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C933626F0317F97CE761F9584F7E5E75 /* KRActivityIndicatorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D9BBCEB59B07372A8B4EA3F04AF4652 /* KRActivityIndicatorView-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CBE6CFC459EB9A00710AC15EFC7904F2 /* Pods-musicdb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68557A0D68ABB5539D53E4E29A8CCEAF /* Pods-musicdb-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DE2C87AA69B1CC2C23897B43DF69C9D0 /* KRActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD7C0C193C008F7EAE64B948EE8EB3 /* KRActivityIndicatorView-dummy.m */; };
+		F178E5AE19517F8FB754014A6A5C56D2 /* KRProgressHUDIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A165DDEC987962FAB616C223B483C9 /* KRProgressHUDIconType.swift */; };
+		FF0C5BACDE050292A9104D71F5C0FE00 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EEB138D1A8046753F6898567D014A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0C7CA6B880C5745EA941B5734B12045C /* PBXContainerItemProxy */ = {
+		5DBFC82B2100254ACAF5EB8F09251A91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 224A15F9DD7AC70AAFD5838C2A3F04DE;
-			remoteInfo = SVProgressHUD;
-		};
-		8694D687018D4B735F7317A29F9A4A70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92F485D60E2BA894A28B930C73C1BA44;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
 			remoteInfo = SwiftyJSON;
 		};
-		A73D8E0661C50588FEB8148626234406 /* PBXContainerItemProxy */ = {
+		76C08342CAB499615E0743B3CD2CF174 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4DAE6F25B00C97B642C71250AB238072;
+			remoteGlobalIDString = C23DB88E45B0ED14F0C8827BE9C46C95;
 			remoteInfo = MarqueeLabel;
+		};
+		AA2899C1FEC3DA0CE2136DBA15104B78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7A1E5A05AF87570E2873C5F725E2CB;
+			remoteInfo = KRActivityIndicatorView;
+		};
+		AFFA3637BDE0939089E77DB54F155E1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7A1E5A05AF87570E2873C5F725E2CB;
+			remoteInfo = KRActivityIndicatorView;
+		};
+		F435EE2EF3159C54FD845154FC45204E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA4681533D6AA601F9C9E2A116B7472C;
+			remoteInfo = KRProgressHUD;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B87A259214F08FC05D6104CB1724802 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		111F8CC6C3F590CF6F30BB1DA230D3DC /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		13614482B2CA05B10ECBF8484E816B66 /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
-		15C787B523B431E82941DB359292C75C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1720E32596483C453D0336DA8D6F4BA9 /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
-		1A7B0166D28FC4AAE51289CAC6D6368B /* Pods_musicdb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_musicdb.framework; path = "Pods-musicdb.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B0DD548372FC330910EF3DFF0BF0D18 /* Pods-musicdb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-musicdb.modulemap"; sourceTree = "<group>"; };
-		1F787B3FCCE9E2E533BDC6623A3A2DD3 /* Pods-musicdb-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-musicdb-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2674E05FA3F92D98F393CCDA18A6FEB1 /* MarqueeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MarqueeLabel.h; path = Sources/ObjC/MarqueeLabel.h; sourceTree = "<group>"; };
-		305191FD1B0E890AB5E0751BAAF6D30D /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		3CD255AED9BD7B1A13232FEF5FB4C00C /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
-		4803F250EE7C80626B93724DC8EDB606 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		512C3FA0D6D08513606FAAF6880A6BD8 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
-		55451499FF890A40C56C67CAB90C7294 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5894095FA9650DB4528EF0955810BA3D /* MarqueeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MarqueeLabel.m; path = Sources/ObjC/MarqueeLabel.m; sourceTree = "<group>"; };
-		69B0405E00CCD845FBBEB0167DB2DAB0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
-		7EAA5B66A0EE469B1962619A50FD5FB4 /* MarqueeLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.xcconfig; sourceTree = "<group>"; };
-		7F774623358127FF1DFE00788926A81D /* MarqueeLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-umbrella.h"; sourceTree = "<group>"; };
-		8088010836638765FBB58CDF9F223868 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
-		83CC2B2ABD09F610A7BD796ACB9D737F /* Pods-musicdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicdb.release.xcconfig"; sourceTree = "<group>"; };
-		83F55B96F9FD27342C0F09BBB7DEE1AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		9120400488D2EB4A9D62D103B16F0F94 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
-		9333B55CE42FB50507530541E3222035 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AF904DB8CB0FE1F9B5307A7C3A8EC7F /* Pods-musicdb-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-musicdb-resources.sh"; sourceTree = "<group>"; };
-		A25F75F34330F7539F9BC47E551866EA /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
-		A2F4E8BCCE416A372740CC5B2CB075CD /* Pods-musicdb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-musicdb-umbrella.h"; sourceTree = "<group>"; };
-		A3866CD335367DC5DE15A9ABCAC5990F /* Pods-musicdb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicdb.debug.xcconfig"; sourceTree = "<group>"; };
-		A49B8945F4AEC8617FBDB4AF66063163 /* Pods-musicdb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-musicdb-dummy.m"; sourceTree = "<group>"; };
-		A53654F6C69F2B1C06A517CAB5691730 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		AA56CB339F2AD44482933BE111956870 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		AD967D8AEF4A4B9F64AB315668587A9E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2E763E08C122EA092238A84987CB850 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		B324A7B172CCBD1772DDE45C0759F0C1 /* Pods-musicdb-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-musicdb-frameworks.sh"; sourceTree = "<group>"; };
-		B61ACB5E6D4892EC6503ADC392B7D1A2 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		B8D8B915FF40EB401BFF7A6C07CC4BAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		BD874DC20A99C02A2E4E8B40C650B292 /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
-		BF0ED897E4F16DDEF1A93D3596FF2FD5 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		C4C2DA7E88C3848FDA61CCCD43BC7007 /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		CD98A106C28B7D0871D51D99E9185F8F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1209D6311A67B9F1D2C8A152B5C378F /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		D254ED1EBF4F8C4969AEF5E71EC01706 /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MarqueeLabel.framework; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD1CA47BEE6C92BD5FD0B703DA985B82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE5BD0962AFE50A4F16AF92316F6590D /* Pods-musicdb-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-musicdb-acknowledgements.plist"; sourceTree = "<group>"; };
-		EEAD86A5494DA41676DF5081E4CE99A9 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		F30BA19A3BCFA8B1A64E31D9C1778EA9 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
-		F3907D979FE2EC2B51E6FFB98D38446C /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		F9140825BE86C1549427B38D20FA7773 /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
+		09A492021DC016E4050D126F13BAF865 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		135EEB138D1A8046753F6898567D014A /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = KRActivityIndicatorView/Classes/Extensions.swift; sourceTree = "<group>"; };
+		1C33CB84138510317C9CFF8E19C47C23 /* libKRProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKRProgressHUD.a; path = libKRProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CEBDE4C47EB761704179D0F6F21645E /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = KRProgressHUD/Classes/Extensions.swift; sourceTree = "<group>"; };
+		2023632724D33A85520537984A34FC18 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
+		20F0AA690A296FD64DFBA79A3A115F1E /* KRProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KRProgressHUD.modulemap; sourceTree = "<group>"; };
+		21401E29BECBCB81EF0501F54E0489E7 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		2E0C371DEBE224B5BD48D71734678908 /* libPods-musicdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-musicdb.a"; path = "libPods-musicdb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EF2B9375263647D8B89F2A523BE782E /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		3BB6AEAF2E475DE29EBB43C5082BE45D /* KRProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
+		3C46F165E2A5ED2FEBBB6E727B279555 /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
+		4126B10720AEDEDD70A3DE91D08FCEB1 /* Pods-musicdb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-musicdb-dummy.m"; sourceTree = "<group>"; };
+		48A165DDEC987962FAB616C223B483C9 /* KRProgressHUDIconType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDIconType.swift; path = KRProgressHUD/Classes/KRProgressHUDIconType.swift; sourceTree = "<group>"; };
+		4F74D87A22132F093F99C049D268C854 /* KRProgressHUDViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDViewController.swift; path = KRProgressHUD/Classes/KRProgressHUDViewController.swift; sourceTree = "<group>"; };
+		50C558A97D7250AC844D1773256DB15B /* KRActivityIndicatorView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRActivityIndicatorView.release.xcconfig; sourceTree = "<group>"; };
+		59F65DDF1180C0A874EE59EC1A5E29E7 /* Pods-musicdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicdb.release.xcconfig"; sourceTree = "<group>"; };
+		632E4BE81BB652563ABC227E9331E0FB /* InnerKRProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InnerKRProgressHUD.swift; path = KRProgressHUD/Classes/InnerKRProgressHUD.swift; sourceTree = "<group>"; };
+		68557A0D68ABB5539D53E4E29A8CCEAF /* Pods-musicdb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-musicdb-umbrella.h"; sourceTree = "<group>"; };
+		6FCD1C98B3183E744B73996D4AAF53FC /* KRActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KRActivityIndicatorView.modulemap; sourceTree = "<group>"; };
+		7FBD7C0C193C008F7EAE64B948EE8EB3 /* KRActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
+		85D13BF4AD806FA087C0353F2F2D8ACA /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
+		89B56AD6B7E7D56400D97E99DF786358 /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorViewStyle.swift; path = KRActivityIndicatorView/Classes/KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
+		8C4E8277602C6DB6F2A42C257206672A /* Pods-musicdb-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-musicdb-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8D4A63A1DAA7D73D7053CF330D7619E8 /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
+		8D9BBCEB59B07372A8B4EA3F04AF4652 /* KRActivityIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRActivityIndicatorView-umbrella.h"; sourceTree = "<group>"; };
+		9258ECC23A4C8B0274C7A6DF69DDFE95 /* libKRActivityIndicatorView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKRActivityIndicatorView.a; path = libKRActivityIndicatorView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2F71607EB508626A2CA624C5997A4A3 /* KRProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRProgressHUD.release.xcconfig; sourceTree = "<group>"; };
+		A52091BF177B0EC2499571FB53D84F99 /* Pods-musicdb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-musicdb.debug.xcconfig"; sourceTree = "<group>"; };
+		A675A2C0564BB9FAC909262C1A15B5BA /* MarqueeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarqueeLabel.swift; path = Sources/MarqueeLabel.swift; sourceTree = "<group>"; };
+		AF6A95395E98E33856FEBA647991C93C /* MarqueeLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.debug.xcconfig; sourceTree = "<group>"; };
+		B98D5D7B6720CD3030004301A27280EC /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
+		BA47C4E6F229DE22FE1567AF236C2E65 /* KRProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		BA9074109D4165DADA23996FA084FD89 /* KRActivityIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRActivityIndicatorView-prefix.pch"; sourceTree = "<group>"; };
+		C549E30FBD0A732CDC0A0E9462531454 /* Pods-musicdb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-musicdb.modulemap"; sourceTree = "<group>"; };
+		C9CE43766EB057A4E93D0EE4D87E1F6A /* KRActivityIndicatorView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRActivityIndicatorView.debug.xcconfig; sourceTree = "<group>"; };
+		CF0AA9FBFBDB70858C030769541505ED /* libMarqueeLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMarqueeLabel.a; path = libMarqueeLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33C688E3B302F5D7160AB6E68D756E3 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		DB7C0461BA63C3C756893C4EC5A12FCF /* MarqueeLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.release.xcconfig; sourceTree = "<group>"; };
+		E23C076BA70925415F490FEDB215DA92 /* libSwiftyJSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftyJSON.a; path = libSwiftyJSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC05DBC038F851223ADAD03A2D340A5 /* MarqueeLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-umbrella.h"; sourceTree = "<group>"; };
+		ECA7E10C84C3A166769EC43E5ACD5F37 /* SwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.debug.xcconfig; sourceTree = "<group>"; };
+		F3B21D4A7FA544F656FE6C1B06E76F53 /* KRProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		F6996C42B88BEA687833622106E7366A /* KRProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		FB30555072B31B966B276A9C24318C27 /* Pods-musicdb-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-musicdb-acknowledgements.plist"; sourceTree = "<group>"; };
+		FC3F0D65FD1729B8CDBE91D2C2470713 /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorView.swift; path = KRActivityIndicatorView/Classes/KRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		FC527E29EFC7BDB66CF5BDE5137AFF92 /* KRProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUD.swift; path = KRProgressHUD/Classes/KRProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		14CB818B25E680D8C0C072170D8CD8F9 /* Frameworks */ = {
+		19C660F35F46E520584C012E253852A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A983C7F4FD93F76C2C7DA2A58C2D339 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4265B1D349B062DE52D783870A674D59 /* Frameworks */ = {
+		35D78C840767341E5B9F259F7FBA8127 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A626A56885C96E8B73D4275EDAF32F15 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8BB2D915749FE6BD6152E01B999E1AC3 /* Frameworks */ = {
+		6B91A537EB4FC5548BBE7E178AE9569E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5E68A1199FC352AA7D4DCF0F1956990 /* Foundation.framework in Frameworks */,
-				CF137E06A9F2BBA66D57FCBDF4BAE431 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2D333BCE091EC47106763666A5CD678 /* Frameworks */ = {
+		ED960EC54D6AAE36513FDAFBC2402993 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23293D7C85EB142CA9FFDDA6538E9276 /* Foundation.framework in Frameworks */,
-				03010F87283CB7527F3DE7BC117D7A15 /* QuartzCore.framework in Frameworks */,
-				D24014C82803007265EDD9E56551709E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF19DD9064C50E906E0F2D3560F8088D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D7A87A398F0D91F1E1B327DC5AD954E /* iOS */ = {
+		1CEBF5394705D34D29B3CBC3A96E6F3A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B8D8B915FF40EB401BFF7A6C07CC4BAC /* Foundation.framework */,
-				83F55B96F9FD27342C0F09BBB7DEE1AE /* QuartzCore.framework */,
-				A53654F6C69F2B1C06A517CAB5691730 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0D7A87A398F0D91F1E1B327DC5AD954E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		363815DB3B77EBEDB46340B7817E5AFC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DD1CA47BEE6C92BD5FD0B703DA985B82 /* Info.plist */,
-				B2E763E08C122EA092238A84987CB850 /* SwiftyJSON.modulemap */,
-				111F8CC6C3F590CF6F30BB1DA230D3DC /* SwiftyJSON.xcconfig */,
-				B61ACB5E6D4892EC6503ADC392B7D1A2 /* SwiftyJSON-dummy.m */,
-				305191FD1B0E890AB5E0751BAAF6D30D /* SwiftyJSON-prefix.pch */,
-				BF0ED897E4F16DDEF1A93D3596FF2FD5 /* SwiftyJSON-umbrella.h */,
+				6FCD1C98B3183E744B73996D4AAF53FC /* KRActivityIndicatorView.modulemap */,
+				7FBD7C0C193C008F7EAE64B948EE8EB3 /* KRActivityIndicatorView-dummy.m */,
+				BA9074109D4165DADA23996FA084FD89 /* KRActivityIndicatorView-prefix.pch */,
+				8D9BBCEB59B07372A8B4EA3F04AF4652 /* KRActivityIndicatorView-umbrella.h */,
+				C9CE43766EB057A4E93D0EE4D87E1F6A /* KRActivityIndicatorView.debug.xcconfig */,
+				50C558A97D7250AC844D1773256DB15B /* KRActivityIndicatorView.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
+			path = "../Target Support Files/KRActivityIndicatorView";
 			sourceTree = "<group>";
 		};
-		39E9C18C35818188430CD4DD80AFFF9F /* Pods-musicdb */ = {
+		3B3D0F412BA5EB8D328C771E04C4ED53 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				55451499FF890A40C56C67CAB90C7294 /* Info.plist */,
-				1B0DD548372FC330910EF3DFF0BF0D18 /* Pods-musicdb.modulemap */,
-				1F787B3FCCE9E2E533BDC6623A3A2DD3 /* Pods-musicdb-acknowledgements.markdown */,
-				EE5BD0962AFE50A4F16AF92316F6590D /* Pods-musicdb-acknowledgements.plist */,
-				A49B8945F4AEC8617FBDB4AF66063163 /* Pods-musicdb-dummy.m */,
-				B324A7B172CCBD1772DDE45C0759F0C1 /* Pods-musicdb-frameworks.sh */,
-				9AF904DB8CB0FE1F9B5307A7C3A8EC7F /* Pods-musicdb-resources.sh */,
-				A2F4E8BCCE416A372740CC5B2CB075CD /* Pods-musicdb-umbrella.h */,
-				A3866CD335367DC5DE15A9ABCAC5990F /* Pods-musicdb.debug.xcconfig */,
-				83CC2B2ABD09F610A7BD796ACB9D737F /* Pods-musicdb.release.xcconfig */,
-			);
-			name = "Pods-musicdb";
-			path = "Target Support Files/Pods-musicdb";
-			sourceTree = "<group>";
-		};
-		42E99E0053744D45B01B7CB15277900D /* MarqueeLabel */ = {
-			isa = PBXGroup;
-			children = (
-				B3A40C8507840AB759A5FEBA922FB391 /* ObjC */,
-				5FADA571AE5BBDB285AB528F06AEAE89 /* Support Files */,
-			);
-			name = MarqueeLabel;
-			path = MarqueeLabel;
-			sourceTree = "<group>";
-		};
-		5D9F7308DF322AE84C3F65C74F9ED131 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				39E9C18C35818188430CD4DD80AFFF9F /* Pods-musicdb */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5FADA571AE5BBDB285AB528F06AEAE89 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AD967D8AEF4A4B9F64AB315668587A9E /* Info.plist */,
-				BD874DC20A99C02A2E4E8B40C650B292 /* MarqueeLabel.modulemap */,
-				7EAA5B66A0EE469B1962619A50FD5FB4 /* MarqueeLabel.xcconfig */,
-				13614482B2CA05B10ECBF8484E816B66 /* MarqueeLabel-dummy.m */,
-				F9140825BE86C1549427B38D20FA7773 /* MarqueeLabel-prefix.pch */,
-				7F774623358127FF1DFE00788926A81D /* MarqueeLabel-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MarqueeLabel";
-			sourceTree = "<group>";
-		};
-		7774FC27516D1E154DCD14A8016313BD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				42E99E0053744D45B01B7CB15277900D /* MarqueeLabel */,
-				9899C2AF1E7645032DFCA1C2A22A0C2D /* SVProgressHUD */,
-				91885374D39DAB1EC03ACE1BAFCC001A /* SwiftyJSON */,
+				4E9064FEA92B651908F5E9763E81ECD7 /* KRActivityIndicatorView */,
+				D5CDBCF62B18D79F0C8B5584E6242670 /* KRProgressHUD */,
+				77AC85E4EA184508656059A8A42F2720 /* MarqueeLabel */,
+				669434A8EA4855ED4850D1608CB83E0A /* SwiftyJSON */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		4E9064FEA92B651908F5E9763E81ECD7 /* KRActivityIndicatorView */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				7774FC27516D1E154DCD14A8016313BD /* Pods */,
-				87397A3B0E53BF755E2FEF0658B4E460 /* Products */,
-				5D9F7308DF322AE84C3F65C74F9ED131 /* Targets Support Files */,
+				135EEB138D1A8046753F6898567D014A /* Extensions.swift */,
+				FC3F0D65FD1729B8CDBE91D2C2470713 /* KRActivityIndicatorView.swift */,
+				89B56AD6B7E7D56400D97E99DF786358 /* KRActivityIndicatorViewStyle.swift */,
+				1CEBF5394705D34D29B3CBC3A96E6F3A /* Support Files */,
 			);
+			name = KRActivityIndicatorView;
+			path = KRActivityIndicatorView;
 			sourceTree = "<group>";
 		};
-		82A136AED6E6888AE0A004149F8AD247 /* Resources */ = {
+		669434A8EA4855ED4850D1608CB83E0A /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				69B0405E00CCD845FBBEB0167DB2DAB0 /* SVProgressHUD.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		87397A3B0E53BF755E2FEF0658B4E460 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D254ED1EBF4F8C4969AEF5E71EC01706 /* MarqueeLabel.framework */,
-				1A7B0166D28FC4AAE51289CAC6D6368B /* Pods_musicdb.framework */,
-				0B87A259214F08FC05D6104CB1724802 /* SVProgressHUD.framework */,
-				CD98A106C28B7D0871D51D99E9185F8F /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		91885374D39DAB1EC03ACE1BAFCC001A /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				AA56CB339F2AD44482933BE111956870 /* SwiftyJSON.swift */,
-				363815DB3B77EBEDB46340B7817E5AFC /* Support Files */,
+				2023632724D33A85520537984A34FC18 /* SwiftyJSON.swift */,
+				E75690D4DC4AE961CF478D4259F9FF87 /* Support Files */,
 			);
 			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		9899C2AF1E7645032DFCA1C2A22A0C2D /* SVProgressHUD */ = {
+		6D2F00A2664F1D83EBCC8E49B70A515A /* Pods-musicdb */ = {
 			isa = PBXGroup;
 			children = (
-				4803F250EE7C80626B93724DC8EDB606 /* SVIndefiniteAnimatedView.h */,
-				F3907D979FE2EC2B51E6FFB98D38446C /* SVIndefiniteAnimatedView.m */,
-				9120400488D2EB4A9D62D103B16F0F94 /* SVProgressAnimatedView.h */,
-				8088010836638765FBB58CDF9F223868 /* SVProgressAnimatedView.m */,
-				A25F75F34330F7539F9BC47E551866EA /* SVProgressHUD.h */,
-				F30BA19A3BCFA8B1A64E31D9C1778EA9 /* SVProgressHUD.m */,
-				3CD255AED9BD7B1A13232FEF5FB4C00C /* SVRadialGradientLayer.h */,
-				9333B55CE42FB50507530541E3222035 /* SVRadialGradientLayer.m */,
-				82A136AED6E6888AE0A004149F8AD247 /* Resources */,
-				D61C45CEDD665DF7CD33B24CED07E644 /* Support Files */,
+				C549E30FBD0A732CDC0A0E9462531454 /* Pods-musicdb.modulemap */,
+				8C4E8277602C6DB6F2A42C257206672A /* Pods-musicdb-acknowledgements.markdown */,
+				FB30555072B31B966B276A9C24318C27 /* Pods-musicdb-acknowledgements.plist */,
+				4126B10720AEDEDD70A3DE91D08FCEB1 /* Pods-musicdb-dummy.m */,
+				68557A0D68ABB5539D53E4E29A8CCEAF /* Pods-musicdb-umbrella.h */,
+				A52091BF177B0EC2499571FB53D84F99 /* Pods-musicdb.debug.xcconfig */,
+				59F65DDF1180C0A874EE59EC1A5E29E7 /* Pods-musicdb.release.xcconfig */,
 			);
-			name = SVProgressHUD;
-			path = SVProgressHUD;
+			name = "Pods-musicdb";
+			path = "Target Support Files/Pods-musicdb";
 			sourceTree = "<group>";
 		};
-		B3A40C8507840AB759A5FEBA922FB391 /* ObjC */ = {
+		77AC85E4EA184508656059A8A42F2720 /* MarqueeLabel */ = {
 			isa = PBXGroup;
 			children = (
-				2674E05FA3F92D98F393CCDA18A6FEB1 /* MarqueeLabel.h */,
-				5894095FA9650DB4528EF0955810BA3D /* MarqueeLabel.m */,
+				A675A2C0564BB9FAC909262C1A15B5BA /* MarqueeLabel.swift */,
+				E23752569E808650A26B1A3DC2704031 /* Support Files */,
 			);
-			name = ObjC;
+			name = MarqueeLabel;
+			path = MarqueeLabel;
 			sourceTree = "<group>";
 		};
-		D61C45CEDD665DF7CD33B24CED07E644 /* Support Files */ = {
+		7E5D60D5F108023ECF6590234BEF2AFF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15C787B523B431E82941DB359292C75C /* Info.plist */,
-				1720E32596483C453D0336DA8D6F4BA9 /* SVProgressHUD.modulemap */,
-				512C3FA0D6D08513606FAAF6880A6BD8 /* SVProgressHUD.xcconfig */,
-				D1209D6311A67B9F1D2C8A152B5C378F /* SVProgressHUD-dummy.m */,
-				EEAD86A5494DA41676DF5081E4CE99A9 /* SVProgressHUD-prefix.pch */,
-				C4C2DA7E88C3848FDA61CCCD43BC7007 /* SVProgressHUD-umbrella.h */,
+				9258ECC23A4C8B0274C7A6DF69DDFE95 /* libKRActivityIndicatorView.a */,
+				1C33CB84138510317C9CFF8E19C47C23 /* libKRProgressHUD.a */,
+				CF0AA9FBFBDB70858C030769541505ED /* libMarqueeLabel.a */,
+				2E0C371DEBE224B5BD48D71734678908 /* libPods-musicdb.a */,
+				E23C076BA70925415F490FEDB215DA92 /* libSwiftyJSON.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC1A710FDC85D0F28062FB970F8B2BDC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D2F00A2664F1D83EBCC8E49B70A515A /* Pods-musicdb */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				3B3D0F412BA5EB8D328C771E04C4ED53 /* Pods */,
+				7E5D60D5F108023ECF6590234BEF2AFF /* Products */,
+				CC1A710FDC85D0F28062FB970F8B2BDC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D5CDBCF62B18D79F0C8B5584E6242670 /* KRProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1CEBDE4C47EB761704179D0F6F21645E /* Extensions.swift */,
+				632E4BE81BB652563ABC227E9331E0FB /* InnerKRProgressHUD.swift */,
+				FC527E29EFC7BDB66CF5BDE5137AFF92 /* KRProgressHUD.swift */,
+				48A165DDEC987962FAB616C223B483C9 /* KRProgressHUDIconType.swift */,
+				4F74D87A22132F093F99C049D268C854 /* KRProgressHUDViewController.swift */,
+				DAF72FB12839C6B8B65ED4A715ACEDCB /* Support Files */,
+			);
+			name = KRProgressHUD;
+			path = KRProgressHUD;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAF72FB12839C6B8B65ED4A715ACEDCB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				20F0AA690A296FD64DFBA79A3A115F1E /* KRProgressHUD.modulemap */,
+				BA47C4E6F229DE22FE1567AF236C2E65 /* KRProgressHUD-dummy.m */,
+				F3B21D4A7FA544F656FE6C1B06E76F53 /* KRProgressHUD-prefix.pch */,
+				F6996C42B88BEA687833622106E7366A /* KRProgressHUD-umbrella.h */,
+				3BB6AEAF2E475DE29EBB43C5082BE45D /* KRProgressHUD.debug.xcconfig */,
+				A2F71607EB508626A2CA624C5997A4A3 /* KRProgressHUD.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SVProgressHUD";
+			path = "../Target Support Files/KRProgressHUD";
+			sourceTree = "<group>";
+		};
+		E23752569E808650A26B1A3DC2704031 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C46F165E2A5ED2FEBBB6E727B279555 /* MarqueeLabel.modulemap */,
+				85D13BF4AD806FA087C0353F2F2D8ACA /* MarqueeLabel-dummy.m */,
+				8D4A63A1DAA7D73D7053CF330D7619E8 /* MarqueeLabel-prefix.pch */,
+				EBC05DBC038F851223ADAD03A2D340A5 /* MarqueeLabel-umbrella.h */,
+				AF6A95395E98E33856FEBA647991C93C /* MarqueeLabel.debug.xcconfig */,
+				DB7C0461BA63C3C756893C4EC5A12FCF /* MarqueeLabel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MarqueeLabel";
+			sourceTree = "<group>";
+		};
+		E75690D4DC4AE961CF478D4259F9FF87 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09A492021DC016E4050D126F13BAF865 /* SwiftyJSON.modulemap */,
+				2EF2B9375263647D8B89F2A523BE782E /* SwiftyJSON-dummy.m */,
+				D33C688E3B302F5D7160AB6E68D756E3 /* SwiftyJSON-prefix.pch */,
+				21401E29BECBCB81EF0501F54E0489E7 /* SwiftyJSON-umbrella.h */,
+				ECA7E10C84C3A166769EC43E5ACD5F37 /* SwiftyJSON.debug.xcconfig */,
+				B98D5D7B6720CD3030004301A27280EC /* SwiftyJSON.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1D2B523D41169DB8D810AA0668B63E46 /* Headers */ = {
+		1D48BD1D82DA98DD025DE1FA995D212E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7511F06568F74845BCA111E3334BD5 /* SVIndefiniteAnimatedView.h in Headers */,
-				1CDD7B2D19883EE5E42C26722419F826 /* SVProgressAnimatedView.h in Headers */,
-				F1C2A7943A6371615D51E9943FF8B448 /* SVProgressHUD-umbrella.h in Headers */,
-				0125AA7E90682182C8F51A246841421D /* SVProgressHUD.h in Headers */,
-				531C495AE342ABFF5DA17EA864BEDD56 /* SVRadialGradientLayer.h in Headers */,
+				C933626F0317F97CE761F9584F7E5E75 /* KRActivityIndicatorView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FC3BD2D24BBDA23FBEF4C9CE3535662 /* Headers */ = {
+		38237C6D3CF1FCA25E5E23FF3DAD573F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9219E4935E22A7BF6DFE8B143FA0B05 /* Pods-musicdb-umbrella.h in Headers */,
+				CBE6CFC459EB9A00710AC15EFC7904F2 /* Pods-musicdb-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFC6565A0F5E4992E5DC06AF16255FBF /* Headers */ = {
+		3837EA4600D6F21FBDD1D261DA9E9B28 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4D79857952DA8DDE64B16BF09672D90 /* SwiftyJSON-umbrella.h in Headers */,
+				BB10447BD49BA68DFE44BD1D2210369F /* MarqueeLabel-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4C380A22D605972FAF76AC881725E8F /* Headers */ = {
+		8FA28DEE4DBB28EBD34F2AB47038DEC8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E58FEEA4B8DC97B0A3C50A697911D483 /* MarqueeLabel-umbrella.h in Headers */,
-				E12230205D73E9DC38733545826BAF7F /* MarqueeLabel.h in Headers */,
+				97DE1D91512721CF78373B8C641C2A29 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F107E7C69E0F49C069C50694546F7A5F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6389DF3A831BD2858C9D5B956BC12694 /* KRProgressHUD-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		224A15F9DD7AC70AAFD5838C2A3F04DE /* SVProgressHUD */ = {
+		4A9F610A53F5A166AF25086F43156304 /* Pods-musicdb */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CD2B1CAB6B24F117E6363656B243D2F /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildConfigurationList = 4F28E9E6D6387D27C4372904782917AD /* Build configuration list for PBXNativeTarget "Pods-musicdb" */;
 			buildPhases = (
-				1D2B523D41169DB8D810AA0668B63E46 /* Headers */,
-				B28D967A2F9D6EA30AE4F4736373B5F3 /* Sources */,
-				8BB2D915749FE6BD6152E01B999E1AC3 /* Frameworks */,
-				82E2F6E9F22263F2AE270AF069506B73 /* Resources */,
+				38237C6D3CF1FCA25E5E23FF3DAD573F /* Headers */,
+				94A087EAB78F7AA481C8C49BB35A197D /* Sources */,
+				6B91A537EB4FC5548BBE7E178AE9569E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8B49391FB31020656E039350879BC6A /* PBXTargetDependency */,
+				B48233CC821016824047D9C80442B010 /* PBXTargetDependency */,
+				F561E3BF4D2A22E13C4D10FFAAE98C20 /* PBXTargetDependency */,
+				13D4C69EB8C43C98B167094148FB8E24 /* PBXTargetDependency */,
+			);
+			name = "Pods-musicdb";
+			productName = "Pods-musicdb";
+			productReference = 2E0C371DEBE224B5BD48D71734678908 /* libPods-musicdb.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4F7A1E5A05AF87570E2873C5F725E2CB /* KRActivityIndicatorView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06A6DC160E44C5DBAAAFDC09CD092886 /* Build configuration list for PBXNativeTarget "KRActivityIndicatorView" */;
+			buildPhases = (
+				1D48BD1D82DA98DD025DE1FA995D212E /* Headers */,
+				AB8F7DB85423B2E371ED1242BC8CA29C /* Sources */,
+				EF19DD9064C50E906E0F2D3560F8088D /* Frameworks */,
+				1F2CB13B3B167172AD01556116610A94 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SVProgressHUD;
-			productName = SVProgressHUD;
-			productReference = 0B87A259214F08FC05D6104CB1724802 /* SVProgressHUD.framework */;
-			productType = "com.apple.product-type.framework";
+			name = KRActivityIndicatorView;
+			productName = KRActivityIndicatorView;
+			productReference = 9258ECC23A4C8B0274C7A6DF69DDFE95 /* libKRActivityIndicatorView.a */;
+			productType = "com.apple.product-type.library.static";
 		};
-		4DAE6F25B00C97B642C71250AB238072 /* MarqueeLabel */ = {
+		BA4681533D6AA601F9C9E2A116B7472C /* KRProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E44C4C51369B8809C08CFE87A68EED1 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */;
+			buildConfigurationList = 569A5EB96591014F9436636868FA8563 /* Build configuration list for PBXNativeTarget "KRProgressHUD" */;
 			buildPhases = (
-				E4C380A22D605972FAF76AC881725E8F /* Headers */,
-				C34DF1E92910F574D94A1DC150FDE78F /* Sources */,
-				A2D333BCE091EC47106763666A5CD678 /* Frameworks */,
-				388BE7314FD7589863656C4C31DFC86A /* Resources */,
+				F107E7C69E0F49C069C50694546F7A5F /* Headers */,
+				684EE09EC21217DA943F51E8E33E1354 /* Sources */,
+				19C660F35F46E520584C012E253852A8 /* Frameworks */,
+				88CD20460AC4171BE7B16E945BA8FB5A /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D645ED9DEB85762578CBBEA2D1D514B /* PBXTargetDependency */,
+			);
+			name = KRProgressHUD;
+			productName = KRProgressHUD;
+			productReference = 1C33CB84138510317C9CFF8E19C47C23 /* libKRProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F69A873CAA8E7DCEBCAF08DB2E2B6E4 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */;
+			buildPhases = (
+				3837EA4600D6F21FBDD1D261DA9E9B28 /* Headers */,
+				787447009C67A9E464FBA156B800F85F /* Sources */,
+				ED960EC54D6AAE36513FDAFBC2402993 /* Frameworks */,
+				378C41C329B8379A234F9DBDE5A8B5A9 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -399,38 +441,17 @@
 			);
 			name = MarqueeLabel;
 			productName = MarqueeLabel;
-			productReference = D254ED1EBF4F8C4969AEF5E71EC01706 /* MarqueeLabel.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = CF0AA9FBFBDB70858C030769541505ED /* libMarqueeLabel.a */;
+			productType = "com.apple.product-type.library.static";
 		};
-		54AB4D7B4B7901B40F70B7F77D2BBAB8 /* Pods-musicdb */ = {
+		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2DED561F652B5CA46B0FD3D21FC8E51C /* Build configuration list for PBXNativeTarget "Pods-musicdb" */;
+			buildConfigurationList = 4544F6920A3F89A0F651EE9A0CA301D5 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				8FC3BD2D24BBDA23FBEF4C9CE3535662 /* Headers */,
-				150FF3B5F97355D1FBC61159F17662A9 /* Sources */,
-				4265B1D349B062DE52D783870A674D59 /* Frameworks */,
-				E9E17195646A73060D3FC6B535897B65 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0F71B7B261889B5A6E85AF90A3FB5756 /* PBXTargetDependency */,
-				886801C3C75D449B7CA7FE03C46BFDE2 /* PBXTargetDependency */,
-				57767A9917240EA1428DF5F861BF51F7 /* PBXTargetDependency */,
-			);
-			name = "Pods-musicdb";
-			productName = "Pods-musicdb";
-			productReference = 1A7B0166D28FC4AAE51289CAC6D6368B /* Pods_musicdb.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		92F485D60E2BA894A28B930C73C1BA44 /* SwiftyJSON */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C522E253F19585B746E3166CC2BE3174 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
-			buildPhases = (
-				CFC6565A0F5E4992E5DC06AF16255FBF /* Headers */,
-				A9813A2F3999DABA8E9EB480E9199CF0 /* Sources */,
-				14CB818B25E680D8C0C072170D8CD8F9 /* Frameworks */,
-				AD973B39FA1C8139260EED2C71C7C09C /* Resources */,
+				8FA28DEE4DBB28EBD34F2AB47038DEC8 /* Headers */,
+				F0CC98C2189097CC02E8B3296AADB760 /* Sources */,
+				35D78C840767341E5B9F259F7FBA8127 /* Frameworks */,
+				34C8FD4A5673E021469B8AD1B44EC5E3 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -438,240 +459,250 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = CD98A106C28B7D0871D51D99E9185F8F /* SwiftyJSON.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = E23C076BA70925415F490FEDB215DA92 /* libSwiftyJSON.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 87397A3B0E53BF755E2FEF0658B4E460 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 7E5D60D5F108023ECF6590234BEF2AFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DAE6F25B00C97B642C71250AB238072 /* MarqueeLabel */,
-				54AB4D7B4B7901B40F70B7F77D2BBAB8 /* Pods-musicdb */,
-				224A15F9DD7AC70AAFD5838C2A3F04DE /* SVProgressHUD */,
-				92F485D60E2BA894A28B930C73C1BA44 /* SwiftyJSON */,
+				4F7A1E5A05AF87570E2873C5F725E2CB /* KRActivityIndicatorView */,
+				BA4681533D6AA601F9C9E2A116B7472C /* KRProgressHUD */,
+				C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */,
+				4A9F610A53F5A166AF25086F43156304 /* Pods-musicdb */,
+				D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		388BE7314FD7589863656C4C31DFC86A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		1F2CB13B3B167172AD01556116610A94 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82E2F6E9F22263F2AE270AF069506B73 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E171D4DCB6EF3F90ACD5BCD5C9C6F13 /* SVProgressHUD.bundle in Resources */,
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/KRActivityIndicatorView/KRActivityIndicatorView.modulemap",
+				"${PODS_ROOT}/Headers/Public/KRActivityIndicatorView/KRActivityIndicatorView-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KRActivityIndicatorView/KRActivityIndicatorView.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KRActivityIndicatorView/KRActivityIndicatorView-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		AD973B39FA1C8139260EED2C71C7C09C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+		34C8FD4A5673E021469B8AD1B44EC5E3 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SwiftyJSON/SwiftyJSON.modulemap",
+				"${PODS_ROOT}/Headers/Public/SwiftyJSON/SwiftyJSON-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftyJSON/SwiftyJSON.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftyJSON/SwiftyJSON-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		E9E17195646A73060D3FC6B535897B65 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+		378C41C329B8379A234F9DBDE5A8B5A9 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/MarqueeLabel/MarqueeLabel.modulemap",
+				"${PODS_ROOT}/Headers/Public/MarqueeLabel/MarqueeLabel-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MarqueeLabel/MarqueeLabel.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MarqueeLabel/MarqueeLabel-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-/* End PBXResourcesBuildPhase section */
+		88CD20460AC4171BE7B16E945BA8FB5A /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/KRProgressHUD/KRProgressHUD.modulemap",
+				"${PODS_ROOT}/Headers/Public/KRProgressHUD/KRProgressHUD-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KRProgressHUD/KRProgressHUD.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KRProgressHUD/KRProgressHUD-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		150FF3B5F97355D1FBC61159F17662A9 /* Sources */ = {
+		684EE09EC21217DA943F51E8E33E1354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F1FF95235AABA58B41BFBB839EDAF24 /* Pods-musicdb-dummy.m in Sources */,
+				24D234DADB4B8414313AD30C5ACD98F7 /* Extensions.swift in Sources */,
+				68718EAE53E10328B8151861297D8411 /* InnerKRProgressHUD.swift in Sources */,
+				4E9A8B51FE2AE2B567C70E7F946F4DBB /* KRProgressHUD-dummy.m in Sources */,
+				369D65F930C4BBC790A9B0FDF4A1A876 /* KRProgressHUD.swift in Sources */,
+				F178E5AE19517F8FB754014A6A5C56D2 /* KRProgressHUDIconType.swift in Sources */,
+				407B90BFDAE37B4230AF1E961B7D3973 /* KRProgressHUDViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9813A2F3999DABA8E9EB480E9199CF0 /* Sources */ = {
+		787447009C67A9E464FBA156B800F85F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5017E707CE545C1BD02E1AFB7C680C61 /* SwiftyJSON-dummy.m in Sources */,
-				115751F6906492365AC094BBEBA60D05 /* SwiftyJSON.swift in Sources */,
+				BA0FA7AEED9A08D0637E014E27929332 /* MarqueeLabel-dummy.m in Sources */,
+				9D8C90542A8D3D93A786E37F4F763D61 /* MarqueeLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B28D967A2F9D6EA30AE4F4736373B5F3 /* Sources */ = {
+		94A087EAB78F7AA481C8C49BB35A197D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C5173DF8C697B9A184BBE23755D945 /* SVIndefiniteAnimatedView.m in Sources */,
-				D806958AC3318B80B8DB22DF82FC8139 /* SVProgressAnimatedView.m in Sources */,
-				9953C81A057274311B04694AF0B8C638 /* SVProgressHUD-dummy.m in Sources */,
-				7DD24796A54B9890404AD7AE618B7E5D /* SVProgressHUD.m in Sources */,
-				846753F0112758E72E6B746C225DC97E /* SVRadialGradientLayer.m in Sources */,
+				94C52DA893EE907AA459C4D139035E73 /* Pods-musicdb-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C34DF1E92910F574D94A1DC150FDE78F /* Sources */ = {
+		AB8F7DB85423B2E371ED1242BC8CA29C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA57A5D4D381A959E0097FF0CC96062 /* MarqueeLabel-dummy.m in Sources */,
-				33DEE880ED25745BE1F833ADDB32225A /* MarqueeLabel.m in Sources */,
+				FF0C5BACDE050292A9104D71F5C0FE00 /* Extensions.swift in Sources */,
+				DE2C87AA69B1CC2C23897B43DF69C9D0 /* KRActivityIndicatorView-dummy.m in Sources */,
+				2ACE41406E36758EED08A0C5834E4780 /* KRActivityIndicatorView.swift in Sources */,
+				B64C10CB28211BE255B1694770C8B67F /* KRActivityIndicatorViewStyle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0CC98C2189097CC02E8B3296AADB760 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D722CEF0752AEA7629A5DF8D83F4050 /* SwiftyJSON-dummy.m in Sources */,
+				5BB560B8F9D6242C930B6243193FB7F3 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0F71B7B261889B5A6E85AF90A3FB5756 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MarqueeLabel;
-			target = 4DAE6F25B00C97B642C71250AB238072 /* MarqueeLabel */;
-			targetProxy = A73D8E0661C50588FEB8148626234406 /* PBXContainerItemProxy */;
-		};
-		57767A9917240EA1428DF5F861BF51F7 /* PBXTargetDependency */ = {
+		13D4C69EB8C43C98B167094148FB8E24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
-			target = 92F485D60E2BA894A28B930C73C1BA44 /* SwiftyJSON */;
-			targetProxy = 8694D687018D4B735F7317A29F9A4A70 /* PBXContainerItemProxy */;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 5DBFC82B2100254ACAF5EB8F09251A91 /* PBXContainerItemProxy */;
 		};
-		886801C3C75D449B7CA7FE03C46BFDE2 /* PBXTargetDependency */ = {
+		6D645ED9DEB85762578CBBEA2D1D514B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SVProgressHUD;
-			target = 224A15F9DD7AC70AAFD5838C2A3F04DE /* SVProgressHUD */;
-			targetProxy = 0C7CA6B880C5745EA941B5734B12045C /* PBXContainerItemProxy */;
+			name = KRActivityIndicatorView;
+			target = 4F7A1E5A05AF87570E2873C5F725E2CB /* KRActivityIndicatorView */;
+			targetProxy = AA2899C1FEC3DA0CE2136DBA15104B78 /* PBXContainerItemProxy */;
+		};
+		B48233CC821016824047D9C80442B010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KRProgressHUD;
+			target = BA4681533D6AA601F9C9E2A116B7472C /* KRProgressHUD */;
+			targetProxy = F435EE2EF3159C54FD845154FC45204E /* PBXContainerItemProxy */;
+		};
+		F561E3BF4D2A22E13C4D10FFAAE98C20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MarqueeLabel;
+			target = C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */;
+			targetProxy = 76C08342CAB499615E0743B3CD2CF174 /* PBXContainerItemProxy */;
+		};
+		F8B49391FB31020656E039350879BC6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KRActivityIndicatorView;
+			target = 4F7A1E5A05AF87570E2873C5F725E2CB /* KRActivityIndicatorView */;
+			targetProxy = AFFA3637BDE0939089E77DB54F155E1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1696AE6F3892E847B80A75F43652BB1F /* Debug */ = {
+		0A1DFCCFC78E6068A9699F1B3151C1F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EAA5B66A0EE469B1962619A50FD5FB4 /* MarqueeLabel.xcconfig */;
+			baseConfigurationReference = A52091BF177B0EC2499571FB53D84F99 /* Pods-musicdb.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
-				PRODUCT_MODULE_NAME = MarqueeLabel;
-				PRODUCT_NAME = MarqueeLabel;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-musicdb/Pods-musicdb.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		280B6C1B5DC7B41487343EE60FC565DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 512C3FA0D6D08513606FAAF6880A6BD8 /* SVProgressHUD.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = SVProgressHUD;
-				PRODUCT_NAME = SVProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3A793DBA351298E0FE6EE0341104752D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 111F8CC6C3F590CF6F30BB1DA230D3DC /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5DE19CECB206ACCCACF04D62F93FFDA6 /* Release */ = {
+		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -703,70 +734,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		858D01EEFE984249A9581D18DBEA53F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -786,7 +753,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -794,242 +761,357 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		C237D32DBBFB272494193CCE86CFBF3A /* Debug */ = {
+		1F296EFE2AA9EA2A32DE7508EFBCFDED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3866CD335367DC5DE15A9ABCAC5990F /* Pods-musicdb.debug.xcconfig */;
+			baseConfigurationReference = A2F71607EB508626A2CA624C5997A4A3 /* KRProgressHUD.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-musicdb/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				GCC_PREFIX_HEADER = "Target Support Files/KRProgressHUD/KRProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/KRProgressHUD/KRProgressHUD.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KRProgressHUD;
+				PRODUCT_NAME = KRProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		357941B0F37F1B2AB56444BC5C16908A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50C558A97D7250AC844D1773256DB15B /* KRActivityIndicatorView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KRActivityIndicatorView/KRActivityIndicatorView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/KRActivityIndicatorView/KRActivityIndicatorView.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KRActivityIndicatorView;
+				PRODUCT_NAME = KRActivityIndicatorView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		597AC3D8C7ED949DA808035684622FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BB6AEAF2E475DE29EBB43C5082BE45D /* KRProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KRProgressHUD/KRProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/KRProgressHUD/KRProgressHUD.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KRProgressHUD;
+				PRODUCT_NAME = KRProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BC3609D8940ED8392D21A82A7EC78E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59F65DDF1180C0A874EE59EC1A5E29E7 /* Pods-musicdb.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-musicdb/Pods-musicdb.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		D2689E6EFF689262092E6955CD171C42 /* Release */ = {
+		8462F77D3A5C7A2B50D423699B336E46 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EAA5B66A0EE469B1962619A50FD5FB4 /* MarqueeLabel.xcconfig */;
+			baseConfigurationReference = C9CE43766EB057A4E93D0EE4D87E1F6A /* KRActivityIndicatorView.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				GCC_PREFIX_HEADER = "Target Support Files/KRActivityIndicatorView/KRActivityIndicatorView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
+				MODULEMAP_FILE = Headers/Public/KRActivityIndicatorView/KRActivityIndicatorView.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KRActivityIndicatorView;
+				PRODUCT_NAME = KRActivityIndicatorView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8B2D194753A800D215B4A66F65960FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF6A95395E98E33856FEBA647991C93C /* MarqueeLabel.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/MarqueeLabel/MarqueeLabel.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = MarqueeLabel;
 				PRODUCT_NAME = MarqueeLabel;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E89EB3A4A86E70B40D640C6C519361D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 512C3FA0D6D08513606FAAF6880A6BD8 /* SVProgressHUD.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = SVProgressHUD;
-				PRODUCT_NAME = SVProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EE0D638E086168103ED349EBBC91ADE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 111F8CC6C3F590CF6F30BB1DA230D3DC /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		FAD0EE81717B8B1A66A9F936F82122D9 /* Release */ = {
+		ABAC61D803695F2B0624AA5FAB095B26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83CC2B2ABD09F610A7BD796ACB9D737F /* Pods-musicdb.release.xcconfig */;
+			baseConfigurationReference = DB7C0461BA63C3C756893C4EC5A12FCF /* MarqueeLabel.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-musicdb/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-musicdb/Pods-musicdb.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/MarqueeLabel/MarqueeLabel.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MarqueeLabel;
+				PRODUCT_NAME = MarqueeLabel;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E5B10C06A1B1F4212A54910184D19589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98D5D7B6720CD3030004301A27280EC /* SwiftyJSON.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/SwiftyJSON/SwiftyJSON.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED7850EE2E5B3394C3331ED544040643 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECA7E10C84C3A166769EC43E5ACD5F37 /* SwiftyJSON.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/SwiftyJSON/SwiftyJSON.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CD2B1CAB6B24F117E6363656B243D2F /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+		06A6DC160E44C5DBAAAFDC09CD092886 /* Build configuration list for PBXNativeTarget "KRActivityIndicatorView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				280B6C1B5DC7B41487343EE60FC565DF /* Debug */,
-				E89EB3A4A86E70B40D640C6C519361D0 /* Release */,
+				8462F77D3A5C7A2B50D423699B336E46 /* Debug */,
+				357941B0F37F1B2AB56444BC5C16908A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4544F6920A3F89A0F651EE9A0CA301D5 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				858D01EEFE984249A9581D18DBEA53F1 /* Debug */,
-				5DE19CECB206ACCCACF04D62F93FFDA6 /* Release */,
+				ED7850EE2E5B3394C3331ED544040643 /* Debug */,
+				E5B10C06A1B1F4212A54910184D19589 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2DED561F652B5CA46B0FD3D21FC8E51C /* Build configuration list for PBXNativeTarget "Pods-musicdb" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C237D32DBBFB272494193CCE86CFBF3A /* Debug */,
-				FAD0EE81717B8B1A66A9F936F82122D9 /* Release */,
+				196DFA3E4A09A28224918543529A1885 /* Debug */,
+				B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E44C4C51369B8809C08CFE87A68EED1 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */ = {
+		4F28E9E6D6387D27C4372904782917AD /* Build configuration list for PBXNativeTarget "Pods-musicdb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1696AE6F3892E847B80A75F43652BB1F /* Debug */,
-				D2689E6EFF689262092E6955CD171C42 /* Release */,
+				0A1DFCCFC78E6068A9699F1B3151C1F2 /* Debug */,
+				5BC3609D8940ED8392D21A82A7EC78E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C522E253F19585B746E3166CC2BE3174 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		569A5EB96591014F9436636868FA8563 /* Build configuration list for PBXNativeTarget "KRProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE0D638E086168103ED349EBBC91ADE8 /* Debug */,
-				3A793DBA351298E0FE6EE0341104752D /* Release */,
+				597AC3D8C7ED949DA808035684622FBA /* Debug */,
+				1F296EFE2AA9EA2A32DE7508EFBCFDED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F69A873CAA8E7DCEBCAF08DB2E2B6E4 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B2D194753A800D215B4A66F65960FF /* Debug */,
+				ABAC61D803695F2B0624AA5FAB095B26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

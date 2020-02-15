@@ -1,26 +1,28 @@
 PODS:
-  - MarqueeLabel (3.2.0):
-    - MarqueeLabel/ObjC (= 3.2.0)
-  - MarqueeLabel/ObjC (3.2.0)
-  - SVProgressHUD (2.2.5)
-  - SwiftyJSON (4.2.0)
+  - KRActivityIndicatorView (3.0.4)
+  - KRProgressHUD (3.4.4):
+    - KRActivityIndicatorView (= 3.0.4)
+  - MarqueeLabel (4.0.2)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - KRProgressHUD
   - MarqueeLabel
-  - SVProgressHUD
   - SwiftyJSON
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - KRActivityIndicatorView
+    - KRProgressHUD
     - MarqueeLabel
-    - SVProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
+  KRProgressHUD: c3b9a48a0ee4824ea13212ac3f1efa50dca021e3
+  MarqueeLabel: f762aa681ae201f66c1d511858b171f75d83013a
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6bf4650f644ed53b8a45bb2f04447e795ed0b605
+PODFILE CHECKSUM: 56bd78c9d5b043ae0d69c330d21d33ca5027ab0a
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.0.beta.3

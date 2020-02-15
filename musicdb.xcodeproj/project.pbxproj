@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CBFDBAC585694945F9CAE85 /* libPods-musicdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E82961ECD50B86EF6DCF89F /* libPods-musicdb.a */; };
 		171514AD1C737F6400547156 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171514AC1C737F6400547156 /* Social.framework */; };
 		174019771C5C956200ED8689 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174019761C5C956200ED8689 /* Application.storyboard */; };
 		174019791C5C959500ED8689 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174019781C5C959500ED8689 /* ApplicationViewController.swift */; };
@@ -27,8 +28,8 @@
 		1779FF201C5C82CC00F00317 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779FF1F1C5C82CC00F00317 /* User.swift */; };
 		177E2A5E1C5CFE260070C9EB /* MusicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E2A5D1C5CFE260070C9EB /* MusicDTO.swift */; };
 		177E2A601C5D0F1B0070C9EB /* MyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E2A5F1C5D0F1B0070C9EB /* MyPlayer.swift */; };
+		179237EB23F80E2000DCCE94 /* Marquee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179237EA23F80E2000DCCE94 /* Marquee.swift */; };
 		17F66C551C5DC28F006CB017 /* MyPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F66C541C5DC28F006CB017 /* MyPlayerDelegate.swift */; };
-		AF1AFC759F09667BFEB63D56 /* Pods_musicdb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79815F02EC7663AEB8D84FEB /* Pods_musicdb.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,9 +58,10 @@
 		1779FF1F1C5C82CC00F00317 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		177E2A5D1C5CFE260070C9EB /* MusicDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDTO.swift; sourceTree = "<group>"; };
 		177E2A5F1C5D0F1B0070C9EB /* MyPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayer.swift; sourceTree = "<group>"; };
+		179237EA23F80E2000DCCE94 /* Marquee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marquee.swift; sourceTree = "<group>"; };
 		17F66C541C5DC28F006CB017 /* MyPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayerDelegate.swift; sourceTree = "<group>"; };
+		1E82961ECD50B86EF6DCF89F /* libPods-musicdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-musicdb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55062E3363117E0803CD7D9D /* Pods-musicdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicdb.release.xcconfig"; path = "Pods/Target Support Files/Pods-musicdb/Pods-musicdb.release.xcconfig"; sourceTree = "<group>"; };
-		79815F02EC7663AEB8D84FEB /* Pods_musicdb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicdb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944A95E2294196179C128C9E /* Pods-musicdb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicdb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-musicdb/Pods-musicdb.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,7 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171514AD1C737F6400547156 /* Social.framework in Frameworks */,
-				AF1AFC759F09667BFEB63D56 /* Pods_musicdb.framework in Frameworks */,
+				0CBFDBAC585694945F9CAE85 /* libPods-musicdb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +81,7 @@
 		174765041C5E055E0048C38E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				179237EA23F80E2000DCCE94 /* Marquee.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -194,7 +197,7 @@
 				175BE99621E74918009F9CE2 /* libSVProgressHUD.a */,
 				175BE99421E74914009F9CE2 /* libMarqueeLabel.a */,
 				171514AC1C737F6400547156 /* Social.framework */,
-				79815F02EC7663AEB8D84FEB /* Pods_musicdb.framework */,
+				1E82961ECD50B86EF6DCF89F /* libPods-musicdb.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,7 +213,6 @@
 				1779FEFF1C5C784000F00317 /* Sources */,
 				1779FF001C5C784000F00317 /* Frameworks */,
 				1779FF011C5C784000F00317 /* Resources */,
-				C5AD16C455BA5F00F456FCAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,7 +236,6 @@
 					1779FF021C5C784000F00317 = {
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -278,32 +279,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C5AD16C455BA5F00F456FCAE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-musicdb/Pods-musicdb-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-musicdb/Pods-musicdb-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E241E5E90BDF5FC4E2A249F7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +312,7 @@
 				174019791C5C959500ED8689 /* ApplicationViewController.swift in Sources */,
 				177E2A601C5D0F1B0070C9EB /* MyPlayer.swift in Sources */,
 				177E2A5E1C5CFE260070C9EB /* MusicDTO.swift in Sources */,
+				179237EB23F80E2000DCCE94 /* Marquee.swift in Sources */,
 				1779FF091C5C784000F00317 /* MainViewController.swift in Sources */,
 				176E233F1C5CC1BD007AC209 /* Api.swift in Sources */,
 				1779FF071C5C784000F00317 /* AppDelegate.swift in Sources */,
@@ -481,7 +457,9 @@
 			baseConfigurationReference = 944A95E2294196179C128C9E /* Pods-musicdb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8KFLUW49V;
 				INFOPLIST_FILE = musicdb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -489,8 +467,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = riverside.musicdb;
+				PRODUCT_BUNDLE_IDENTIFIER = norainu.musicdb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -500,7 +479,9 @@
 			baseConfigurationReference = 55062E3363117E0803CD7D9D /* Pods-musicdb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8KFLUW49V;
 				INFOPLIST_FILE = musicdb/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -508,8 +489,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = riverside.musicdb;
+				PRODUCT_BUNDLE_IDENTIFIER = norainu.musicdb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

@@ -10,7 +10,7 @@
 import UIKit
 import MarqueeLabel
 import LocalAuthentication
-import SVProgressHUD
+import KRProgressHUD
 import Social
 import MediaPlayer
 
@@ -180,7 +180,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func next(_ cell: CustomCellTableViewCell) {
-    SVProgressHUD.show(withStatus: "処理中")
+    KRProgressHUD.show(withMessage: "処理中")
     //dispatch_async_global {
     dispatch_async_main {
       switch cell.pageType {
@@ -221,7 +221,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func back(){
-    SVProgressHUD.show(withStatus: "処理中")
+    KRProgressHUD.show(withMessage: "処理中")
     //dispatch_async_global {
     dispatch_async_main {
       switch self.mode {
@@ -250,7 +250,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
       case .Genre:
         //print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
         self.mode = PageType.Genre
-        SVProgressHUD.dismiss()
+        KRProgressHUD.dismiss()
       case .Undefined: break
       }
       //lblDisplay.text = mode.rawValue
@@ -261,30 +261,30 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func go2Artist(_ gnr:String){
-    SVProgressHUD.show(withStatus: "処理中")
+    KRProgressHUD.show(withMessage: "処理中")
     self.genre  = gnr
     list = SearchGenreModel.byGenre(gnr)
   }
 
   func go2Album(_ artist:String){
-    SVProgressHUD.show(withStatus: "処理中")
+    KRProgressHUD.show(withMessage: "処理中")
     self.artist = artist
     list = SearchGenreModel.byArtist(artist)
   }
 
   func go2Track(_ album:String){
-    SVProgressHUD.show(withStatus: "処理中")
+    KRProgressHUD.show(withMessage: "処理中")
     self.album = album
     list = SearchGenreModel.byAlbum(album)
   }
 
   func startplay(_ cell:CustomCellTableViewCell){
-    SVProgressHUD.show(withStatus: "処理中")
+    KRProgressHUD.show(withMessage: "処理中")
     let l = self.SearchGenreModel.makeTrackList(self.mode,c:cell,_id:cell._id)
     self.myPlayer.setPlaylist(l)
     print("set playlist")
     self.myPlayer.play()
-    SVProgressHUD.dismiss()
+    KRProgressHUD.dismiss()
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
@@ -360,7 +360,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     }
     c?.setValues()
     print("set cell:" + Date().timeIntervalSince(s).description)
-    SVProgressHUD.dismiss()
+    KRProgressHUD.dismiss()
     return c!
 
   }
@@ -396,7 +396,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func go2(_ sceneName:String){
-    SVProgressHUD.dismiss()
+    KRProgressHUD.dismiss()
     let c :ApplicationViewController = self.storyboard?.instantiateViewController(withIdentifier: sceneName) as! ApplicationViewController
     c.genre = self.genre
     c.artist = self.artist

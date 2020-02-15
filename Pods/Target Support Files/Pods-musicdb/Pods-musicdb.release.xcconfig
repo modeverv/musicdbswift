@@ -1,11 +1,12 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/MarqueeLabel" "${PODS_CONFIGURATION_BUILD_DIR}/SVProgressHUD" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/MarqueeLabel/MarqueeLabel.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SVProgressHUD/SVProgressHUD.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "MarqueeLabel" -framework "SVProgressHUD" -framework "SwiftyJSON"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/KRActivityIndicatorView" "${PODS_CONFIGURATION_BUILD_DIR}/KRProgressHUD" "${PODS_CONFIGURATION_BUILD_DIR}/MarqueeLabel" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KRProgressHUD/KRProgressHUD.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/MarqueeLabel/MarqueeLabel.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.modulemap"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"KRActivityIndicatorView" -l"KRProgressHUD" -l"MarqueeLabel" -l"SwiftyJSON" -framework "QuartzCore" -framework "UIKit"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KRProgressHUD/KRProgressHUD.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/MarqueeLabel/MarqueeLabel.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.modulemap"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/KRActivityIndicatorView" "${PODS_CONFIGURATION_BUILD_DIR}/KRProgressHUD" "${PODS_CONFIGURATION_BUILD_DIR}/MarqueeLabel" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON"
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
