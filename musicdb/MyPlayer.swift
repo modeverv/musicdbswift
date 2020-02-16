@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import MediaPlayer
+import KRProgressHUD
 
 class MyPlayer {
   var playList:[MusicDTO] = [MusicDTO]()
@@ -160,6 +161,7 @@ print("5")
 
         player.play()
         isPlaying = true
+        KRProgressHUD.dismiss()
       }
     }
     return m

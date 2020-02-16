@@ -78,7 +78,7 @@
                                     <action selector="bntNextClick:" destination="Pzw-Rl-caH" eventType="touchUpInside" id="c0R-DI-0jT"/>
                                 </connections>
                             </button>
-                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
+                            <searchBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" searchBarStyle="prominent" text="" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-Or-LCa">
                                 <rect key="frame" x="2" y="70" width="369" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

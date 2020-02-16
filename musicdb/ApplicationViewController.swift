@@ -147,7 +147,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
       }
     }
     searchBar.textField?.rightButton?.tintColor = UIColor.white
-
+    searchBar.text = search
   }
 
   func dispatch_async_main(_ block: @escaping () -> ()) {
@@ -181,43 +181,40 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   func next(_ cell: CustomCellTableViewCell) {
     KRProgressHUD.show(withMessage: "処理中")
-    //dispatch_async_global {
-    dispatch_async_main {
-      switch cell.pageType {
-      case .Genre:
-        let s = Date()
-        self.go2Artist(cell.title)
-        self.mode = PageType.Artist
-        print("next")
-        //self.tableView.reloadData()
-        print("next-" + Date().timeIntervalSince(s).description)
-        self.go2("Artist")
-      case .Artist:
-        self.go2Album(cell.artist)
-        self.mode = PageType.Album
-        print("next")
-        //self.tableView.reloadData()
-        self.go2("Album")
-      case .Album:
-        self.go2Track(cell.album)
-        self.mode = PageType.Track
-        print("next")
-        //self.tableView.reloadData()
-        self.go2("Track")
-      case .Track:
-        self.startplay(cell)
-        self.mode = PageType.Track
-      case .Search:
-        self.startplay(cell)
-        self.mode = PageType.Search
-      case .Undefined:
-        break
+      //dispatch_async_global {
+      self.dispatch_async_main {
+        switch cell.pageType {
+        case .Genre:
+          let s = Date()
+          self.go2Artist(cell.title)
+          self.mode = PageType.Artist
+          print("next")
+          //self.tableView.reloadData()
+          print("next-" + Date().timeIntervalSince(s).description)
+          self.go2("Artist")
+        case .Artist:
+          self.go2Album(cell.artist)
+          self.mode = PageType.Album
+          print("next")
+          //self.tableView.reloadData()
+          self.go2("Album")
+        case .Album:
+          self.go2Track(cell.album)
+          self.mode = PageType.Track
+          print("next")
+          //self.tableView.reloadData()
+          self.go2("Track")
+        case .Track:
+          self.startplay(cell)
+          self.mode = PageType.Track
+        case .Search:
+          self.startplay(cell)
+          self.mode = PageType.Search
+        case .Undefined:
+          break
+        }
+        //self.lblDisplay.text = mode.rawValue
       }
-
-      //self.lblDisplay.text = mode.rawValue
-
-    }
-
   }
 
   func back(){
@@ -262,29 +259,33 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
 
   func go2Artist(_ gnr:String){
     KRProgressHUD.show(withMessage: "処理中")
-    self.genre  = gnr
-    list = SearchGenreModel.byGenre(gnr)
+      self.genre  = gnr
+      self.list = self.SearchGenreModel.byGenre(gnr)
+
   }
 
   func go2Album(_ artist:String){
     KRProgressHUD.show(withMessage: "処理中")
-    self.artist = artist
-    list = SearchGenreModel.byArtist(artist)
+      self.artist = artist
+      self.list = self.SearchGenreModel.byArtist(artist)
+
   }
 
   func go2Track(_ album:String){
     KRProgressHUD.show(withMessage: "処理中")
-    self.album = album
-    list = SearchGenreModel.byAlbum(album)
+      self.album = album
+      self.list = self.SearchGenreModel.byAlbum(album)
+
   }
 
   func startplay(_ cell:CustomCellTableViewCell){
-    KRProgressHUD.show(withMessage: "処理中")
-    let l = self.SearchGenreModel.makeTrackList(self.mode,c:cell,_id:cell._id)
-    self.myPlayer.setPlaylist(l)
-    print("set playlist")
-    self.myPlayer.play()
-    KRProgressHUD.dismiss()
+    KRProgressHUD.show(withMessage: "取得中") {
+      let l = self.SearchGenreModel.makeTrackList(self.mode,c:cell,_id:cell._id)
+      self.myPlayer.setPlaylist(l)
+      print("set playlist")
+      self.myPlayer.play()
+    }
+    //KRProgressHUD.dismiss()
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
@@ -385,18 +386,21 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-    if let t = searchBar.text {
-      self.search = t
-      list = SearchGenreModel.bySearch(t)
-      mode = PageType.Search
-      //tableView.reloadData()
-      go2("Search")
+    print("検索中")
+    KRProgressHUD.show(withMessage: "検索中") {
+      if let t = searchBar.text {
+        self.search = t
+        self.list = self.SearchGenreModel.bySearch(t)
+        self.mode = PageType.Search
+        //tableView.reloadData()
+        self.go2("Search")
+        print("検索完了")
+      }
+      searchBar.resignFirstResponder()
     }
-    searchBar.resignFirstResponder()
   }
 
   func go2(_ sceneName:String){
-    KRProgressHUD.dismiss()
     let c :ApplicationViewController = self.storyboard?.instantiateViewController(withIdentifier: sceneName) as! ApplicationViewController
     c.genre = self.genre
     c.artist = self.artist
@@ -410,6 +414,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
     c.twitter = self.twitter
     c.search = self.search
     self.present(c, animated: true, completion: nil)
+    KRProgressHUD.dismiss()
   }
 
   // MARK: Remote Command Event
