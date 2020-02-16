@@ -180,7 +180,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
   }
 
   func next(_ cell: CustomCellTableViewCell) {
-    KRProgressHUD.show(withMessage: "処理中")
+    KRProgressHUD.show(withMessage: "処理中") {
       //dispatch_async_global {
       self.dispatch_async_main {
         switch cell.pageType {
@@ -188,14 +188,14 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
           let s = Date()
           self.go2Artist(cell.title)
           self.mode = PageType.Artist
-          print("next")
+          print("next=>Artist")
           //self.tableView.reloadData()
           print("next-" + Date().timeIntervalSince(s).description)
           self.go2("Artist")
         case .Artist:
           self.go2Album(cell.artist)
           self.mode = PageType.Album
-          print("next")
+          print("next=>Album")
           //self.tableView.reloadData()
           self.go2("Album")
         case .Album:
@@ -215,14 +215,15 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
         }
         //self.lblDisplay.text = mode.rawValue
       }
+    }
   }
 
   func back(){
-    KRProgressHUD.show(withMessage: "処理中")
+    KRProgressHUD.show(withMessage: "処理中") {
     //dispatch_async_global {
-    dispatch_async_main {
+      self.dispatch_async_main {
       switch self.mode {
-      case .Track:
+        case .Track:
         //print(mode.rawValue + ":genre-" + genre + ":artist-" + artist + ":album-" + album)
         self.mode = PageType.Album
         self.go2Album(self.artist)
@@ -252,7 +253,7 @@ class ApplicationViewController: UIViewController,UITableViewDataSource,UITableV
       }
       //lblDisplay.text = mode.rawValue
       //self.lblDisplay.text = mode.rawValue
-
+      }
     }
 
   }
